@@ -1,0 +1,2596 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1E6BFF">
+<meta name="description" content="Ôn tập Hóa học 12 giữa học kỳ I: Ester – Lipid, Carbohydrate và hợp chất chứa nitrogen. Luyện tập, thi thử, đảo đề và giải thích đáp án.">
+<title>Hóa học 12 · Trạm ôn tập</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231E6BFF'/%3E%3Ctext x='32' y='45' font-size='42' text-anchor='middle' fill='white' font-family='sans-serif'%3EH%3C/text%3E%3C/svg%3E">
+<style>
+/* Màu sắc và bố cục dùng chung, không tải font hay tài nguyên bên ngoài. */
+:root{--blue:#1E6BFF;--blue-light:#EEF4FF;--green:#22B573;--red:#F04438;--orange:#F79009;--ink:#172B4D;--muted:#63718A;--line:#E3E8F0;--bg:#F4F6FA;--shadow:0 4px 24px rgba(23,43,77,.045)}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:112px}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+button,input,select{font:inherit}
+button,select{cursor:pointer}
+button{touch-action:manipulation}
+button:disabled{cursor:default;opacity:.65}
+button:focus-visible,a:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #8CB4FF;outline-offset:3px}
+a{color:var(--blue)}
+h1,h2,h3,p{margin-top:0}
+h1,h2,h3{line-height:1.3;letter-spacing:-.025em}
+button{color:inherit}
+button svg{flex-shrink:0}
+svg{vertical-align:middle}
+button,.card,select{border-radius:12px}
+.hidden,[hidden]{display:none!important}
+.wrap{max-width:1200px;margin:auto;padding:0 32px}
+.site-header{background:white;border-bottom:1px solid var(--line)}
+.brand-row{min-height:80px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);background:none;border:0;padding:0;text-align:left}
+.logo{width:42px;height:42px;display:grid;place-items:center;background:var(--blue);color:white;border-radius:12px}
+.brand strong{display:block;font-size:19px;line-height:1.3}
+.brand small{display:block;font-size:11px;color:var(--muted);letter-spacing:.1em;margin-top:3px}
+.header-note{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:7px}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:8px;background:var(--blue-light);color:var(--blue);font-size:12px;font-weight:650}
+.pill.orange{color:#955508;background:#FFF3DF}
+.pill.green{color:#127447;background:#E8F8EF}
+.hero{padding:48px 0 32px;display:grid;grid-template-columns:1.45fr 1fr;align-items:center;gap:48px}
+.eyebrow{color:var(--blue);font-size:11px;letter-spacing:.16em;font-weight:750;margin-bottom:14px}
+.hero h1{font-size:42px;line-height:1.2;margin-bottom:16px;letter-spacing:-.045em}
+.hero h1 span{color:var(--blue)}
+.hero p{max-width:530px;color:var(--muted);margin-bottom:18px}
+.hero-chips{display:flex;flex-wrap:wrap;gap:8px}
+.overview{background:white;border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--shadow);display:flex;align-items:center;gap:24px}
+.overview .ring{width:116px;height:116px;flex-shrink:0;background:conic-gradient(var(--blue) 0% 73.7%,#B7CFFF 73.7% 100%);padding:9px}
+.ring{border-radius:50%;display:grid;place-items:center}
+.ring-inner{background:white;border-radius:50%;width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column}
+.overview .ring strong{font-size:32px;line-height:1.2}
+.ring small{font-size:11px;color:var(--muted)}
+.overview h2{font-size:16px;margin-bottom:12px}
+.overview p{font-size:13px;margin-bottom:5px;display:flex;align-items:center;gap:8px}
+.dot{width:8px;height:8px;border-radius:50%;display:inline-block;background:var(--blue)}
+.dot.light{background:#B7CFFF}
+.section-heading{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:18px}
+.section-heading h2{font-size:21px;margin:0}
+.section-heading p{margin:3px 0 0;color:var(--muted);font-size:13px}
+.toolbar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin:22px 0}
+.tabs{padding:4px;background:#E9EDF4;border-radius:12px;display:flex;gap:3px}
+.tab{border:0;background:transparent;color:var(--muted);padding:9px 16px;font-weight:600;font-size:13px;border-radius:9px}
+.tab.active{background:white;color:var(--blue);box-shadow:0 2px 5px #14294D0C}
+.filter{display:flex;align-items:center;gap:9px;font-size:13px;color:var(--muted)}
+select{border:1px solid var(--line);padding:9px 30px 9px 12px;background:white;color:var(--ink);max-width:100%}
+.exam-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card{background:white;border:1px solid var(--line);box-shadow:var(--shadow)}
+.exam-card{padding:23px;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.exam-card.comprehensive{background:linear-gradient(135deg,#fff 35%,#EEF4FF)}
+.card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:21px}
+.chapter-icon{background:var(--blue-light);color:var(--blue);border-radius:12px;width:46px;height:46px;display:grid;place-items:center}
+.exam-card h3{font-size:18px;margin-bottom:9px}
+.exam-card .description{color:var(--muted);font-size:13px;min-height:42px;margin-bottom:19px}
+.meta{display:flex;gap:20px;font-size:13px;color:var(--muted);padding-bottom:19px;margin-top:auto}
+.meta span{display:flex;align-items:center;gap:6px}
+.card-bottom{border-top:1px solid var(--line);padding-top:17px;display:flex;align-items:center;justify-content:space-between;font-size:12px;color:var(--muted);gap:12px}
+.btn{border:1px solid var(--line);background:white;padding:10px 16px;font-weight:650;font-size:13px;display:inline-flex;align-items:center;justify-content:center;gap:8px;line-height:1.5;text-decoration:none}
+.btn.primary{background:var(--blue);border-color:var(--blue);color:white}
+.btn.primary:hover{background:#155BE0}
+.btn:hover{filter:brightness(.98)}
+.btn.soft{background:var(--blue-light);color:var(--blue);border-color:transparent}
+.btn.danger{color:var(--red)}
+.text-button{border:0;background:none;color:var(--blue);font-size:13px;font-weight:600;padding:5px}
+.note{padding:15px 18px;color:var(--muted);background:white;border:1px solid var(--line);border-radius:12px;font-size:13px;margin-top:22px}
+.note strong{color:var(--ink)}
+.history-section{margin-top:38px}
+.history-box{overflow-x:auto}
+.history-table{width:100%;border-collapse:collapse;font-size:13px;white-space:nowrap}
+.history-table th,.history-table td{text-align:left;padding:16px 20px;border-bottom:1px solid var(--line)}
+.history-table tr:last-child td{border:0}
+.history-table th{font-weight:500;color:var(--muted);font-size:12px;background:#FBFCFE}
+.score-small{color:var(--blue);font-weight:750}
+.empty{padding:32px;text-align:center;color:var(--muted);font-size:13px}
+.empty svg{display:block;margin:0 auto 10px;color:#A2AEC1}
+.footer{padding:30px 0;color:var(--muted);font-size:12px;text-align:center}
+.footer span{color:var(--blue)}
+
+/* Thanh thi và bảng câu hỏi: hai cột trên màn hình lớn, ngăn dưới trên điện thoại. */
+.exam-topbar{position:sticky;top:0;background:white;z-index:20;border-bottom:1px solid var(--line)}
+.exam-topbar .wrap{min-height:80px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:15px}
+.exam-title{font-weight:700;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.exam-subtitle{font-size:12px;font-weight:400;color:var(--muted)}
+.timer-box{text-align:center}
+.timer-label{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+.timer{font-size:23px;font-weight:750;font-variant-numeric:tabular-nums;color:var(--blue);line-height:1.3}
+.timer.urgent{color:var(--red)}
+.top-actions{justify-self:end;display:flex;gap:8px}
+.exam-layout{display:grid;grid-template-columns:minmax(0,7fr) minmax(265px,3fr);gap:24px;padding-top:25px;padding-bottom:35px;align-items:start}
+.exam-tools{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:15px;flex-wrap:wrap}
+.exam-tools .tabs .tab{padding:7px 11px;font-size:12px}
+.exam-tools>span{color:var(--muted);font-size:12px}
+.part-label{display:flex;align-items:center;gap:10px;margin:24px 0 13px;font-weight:700;font-size:14px}
+.part-label:first-child{margin-top:0}
+.part-label span{background:#E4EBF6;color:#536783;border-radius:6px;padding:2px 7px;font-size:11px;letter-spacing:.04em}
+.question-card{padding:26px;margin-bottom:18px;scroll-margin-top:102px;overflow-wrap:anywhere}
+.question-heading{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:14px}
+.question-heading h2{font-size:17px;margin:0}
+.question-source{display:block;font-size:11px;font-weight:400;color:var(--muted);margin-top:5px;letter-spacing:0}
+.question-text,.statement-text,.explanation,.original-text{white-space:pre-line}
+.question-text{font-size:16px;line-height:1.75;margin-bottom:22px}
+.question-image{display:block;max-width:100%;max-height:200px;width:auto;margin:12px 0 22px;image-rendering:auto}
+.options{display:grid;gap:11px}
+.option{width:100%;text-align:left;display:flex;align-items:center;gap:13px;line-height:1.6;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:white;font-size:15px;opacity:1!important}
+.option:hover:not(:disabled){border-color:#94BAFF;background:#FAFCFF}
+.letter{border:1px solid #CFD7E5;min-width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:650;align-self:flex-start;margin-top:1px}
+.option.selected{border-color:var(--blue);background:var(--blue-light)}
+.option.selected .letter{background:var(--blue);border-color:var(--blue);color:white}
+.option.correct{border-color:var(--green);background:#F0FBF5}
+.option.correct .letter{background:var(--green);border-color:var(--green);color:white}
+.option.incorrect{border-color:var(--red);background:#FFF3F1}
+.option.incorrect .letter{background:var(--red);border-color:var(--red);color:white}
+.choice-content{flex:1;white-space:pre-line}
+.choice-mark{font-size:11px;font-weight:700;color:#12834D;white-space:nowrap}
+.incorrect .choice-mark{color:var(--red)}
+.question-actions{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:23px;border-top:1px solid var(--line);padding-top:18px;flex-wrap:wrap}
+.navigation{display:flex;gap:8px}
+.flag-button{border:0;background:#FFF8EC;color:#9A630B;font-size:12px;padding:8px 12px;display:inline-flex;gap:5px;align-items:center;border-radius:8px}
+.flag-button.flagged{background:#FFF0D8;color:#965207;font-weight:750}
+.question-aside{position:sticky;top:105px;padding:22px;max-height:calc(100vh - 125px);overflow-y:auto}
+.aside-title{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:15px}
+.aside-title h2{font-size:16px;margin:0}
+.aside-progress{font-size:12px;color:var(--muted);margin:0 0 6px}
+.progress-track{height:5px;border-radius:10px;background:#EDF0F6;overflow:hidden;margin-bottom:20px}
+.progress-fill{height:100%;background:var(--blue);transition:width .2s}
+.grid-label{font-size:11px;font-weight:700;color:var(--muted);margin:13px 0 9px;text-transform:uppercase;letter-spacing:.04em}
+.question-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(35px,1fr));gap:8px}
+.q-number{height:36px;min-width:0;border:1px solid #CDD6E4;background:white;border-radius:7px;font-size:12px;position:relative;padding:0}
+.q-number.answered{background:var(--blue);border-color:var(--blue);color:white}
+.q-number.partial{background:#EEF4FF;border-color:#8DB6FF;color:#1A5DCA}
+.q-number.flagged{background:var(--orange);border-color:var(--orange);color:white}
+.q-number.correct{background:var(--green);border-color:var(--green);color:white}
+.q-number.incorrect{background:var(--red);border-color:var(--red);color:white}
+.q-number.blank{background:#EEF0F4;border-color:#D4D9E2;color:#727D8D}
+.q-number.current{outline:2px solid #233B60;outline-offset:2px}
+.q-number.partial-score{background:#FFF2DD;border-color:#F79009;color:#915307}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:11px;color:var(--muted);margin-top:23px;padding-top:17px;border-top:1px solid var(--line)}
+.legend span{display:flex;align-items:center;gap:5px}
+.legend i{width:11px;height:11px;border:1px solid #CCD5E3;border-radius:3px;background:white}
+.legend .blue{background:var(--blue);border-color:var(--blue)}
+.legend .orange{background:var(--orange);border-color:var(--orange)}
+.legend .green{background:var(--green);border-color:var(--green)}
+.legend .red{background:var(--red);border-color:var(--red)}
+.legend .gray{background:#D5DAE3;border-color:#D5DAE3}
+.aside-note{font-size:11px;color:var(--muted);margin:17px 0 0}
+.mobile-grid-toggle{display:none}
+.drawer-overlay{position:fixed;inset:0;background:#172B4D66;z-index:49}
+.close-drawer{display:none;border:0;background:#EEF1F6;border-radius:8px;padding:4px 8px}
+.statement{border:1px solid var(--line);padding:15px;border-radius:10px;margin-top:12px}
+.statement.correct{border-color:var(--green);background:#F4FCF7}
+.statement.incorrect{border-color:var(--red);background:#FFF7F6}
+.statement-row{display:flex;gap:16px;align-items:flex-start;justify-content:space-between}
+.statement-text{flex:1}
+.tf-controls{display:flex;gap:6px;flex-shrink:0}
+.tf-choice{font-size:12px;border:1px solid #CFD7E5;background:white;border-radius:8px;padding:7px 11px;opacity:1!important}
+.tf-choice.selected{background:var(--blue);border-color:var(--blue);color:white}
+.tf-choice.right{border-color:var(--green);background:var(--green);color:white}
+.tf-choice.wrong{border-color:var(--red);background:var(--red);color:white}
+.statement-feedback{font-size:13px;margin-top:12px;border-top:1px solid #DAE4DC;padding-top:10px}
+.explanation{padding:17px 19px;background:#EEF7FF;border-radius:10px;margin-top:20px;color:#304C70;font-size:14px}
+.explanation strong{display:block;margin-bottom:5px;color:#174D93}
+.answer-summary{font-size:13px;color:var(--muted);margin-top:16px}
+.edit-details{margin-top:18px;border:1px dashed #D7DFED;border-radius:9px;font-size:12px;padding:11px 13px;background:#FCFDFE;color:var(--muted)}
+.edit-details summary{cursor:pointer;color:#536783;font-weight:650}
+.edit-details p{margin:11px 0 0}
+.original-text{padding:10px;background:#F0F3F8;border-radius:6px;margin-top:10px}
+.review-alert{font-size:12px;padding:10px 13px;background:#FFF5DF;color:#87580B;border-radius:8px;margin-bottom:16px}
+.result-wrap{max-width:950px;margin:auto;padding:35px 28px}
+.breadcrumb{font-size:13px;color:var(--muted);margin-bottom:23px}
+.result-card{padding:35px;text-align:center}
+.result-card h1{font-size:26px;margin:12px 0 7px}
+.result-card>p{color:var(--muted);font-size:13px}
+.result-main{display:flex;align-items:center;justify-content:center;gap:40px;margin:30px 0}
+.result-ring{width:142px;height:142px;padding:10px}
+.result-ring strong{font-size:28px}
+.big-score{font-size:64px;line-height:1;font-weight:800;letter-spacing:-.06em;color:var(--blue)}
+.big-score small{font-size:24px;color:#97A4BA;letter-spacing:0}
+.score-caption{font-size:12px;color:var(--muted);margin-top:10px}
+.result-stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:28px;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.stat{padding:18px 10px;border-right:1px solid var(--line)}
+.stat:last-child{border:0}
+.stat strong{display:block;font-size:23px}
+.stat span{font-size:12px;color:var(--muted)}
+.green-text{color:#14864F}
+.red-text{color:var(--red)}
+.result-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:27px}
+.result-detail{margin-top:20px;padding:23px;font-size:13px;color:var(--muted)}
+.result-detail h2{font-size:16px;color:var(--ink)}
+.result-detail p:last-child{margin-bottom:0}
+.modal-backdrop{position:fixed;inset:0;background:#172B4D77;z-index:100;display:grid;place-items:center;padding:20px}
+.modal{background:white;width:100%;max-width:520px;border-radius:18px;box-shadow:0 20px 100px #172B4D33;max-height:calc(100dvh - 40px);max-height:calc(100vh - 40px);overflow:auto}
+.modal-head{display:flex;justify-content:space-between;align-items:center;padding:23px 25px 0;gap:12px}
+.modal-head h2{font-size:21px;margin:0}
+.icon-button{border:0;background:#F0F3F8;border-radius:8px;width:32px;height:32px;display:grid;place-items:center}
+.modal-body{padding:20px 25px 25px}
+.modal-description{color:var(--muted);font-size:13px;margin-bottom:18px}
+.field{margin:18px 0}
+.field label{font-size:13px;display:block;font-weight:650;margin-bottom:8px}
+.field select{width:100%;padding:11px}
+.mode-buttons{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mode-button{text-align:left;border:1px solid var(--line);padding:13px;background:white}
+.mode-button.active{border-color:var(--blue);background:var(--blue-light)}
+.mode-button strong{display:block;font-size:14px}
+.mode-button small{display:block;color:var(--muted);font-size:11px;margin-top:4px}
+.modal-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:25px}
+.modal-note{padding:12px 14px;background:#F4F7FC;border-radius:9px;color:var(--muted);font-size:12px}
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);background:#172B4D;color:white;border-radius:10px;box-shadow:var(--shadow);padding:12px 20px;max-width:calc(100% - 32px);z-index:200;font-size:13px;text-align:center}
+.skip-link{position:fixed;top:-100px;left:15px;z-index:300;background:white;padding:10px;border-radius:8px}
+.skip-link:focus{top:10px}
+
+@media(min-width:1100px){.exam-card.comprehensive{grid-column:1/-1;display:grid;grid-template-columns:54px 1.4fr 1fr auto;gap:18px;align-items:center}
+.comprehensive .card-top{margin:0}
+.comprehensive .card-top .pill{display:none}
+.comprehensive h3{margin-bottom:4px}
+.comprehensive .description{min-height:0;margin:0}
+.comprehensive .meta{padding:0;margin:0}
+.comprehensive .card-bottom{border:0;padding:0;gap:20px}
+}
+
+@media(max-width:1000px){.hero{gap:24px}
+.hero h1{font-size:35px}
+.overview{gap:15px;padding:20px}
+.overview .ring{width:92px;height:92px}
+.exam-cards{gap:14px}
+.exam-card{padding:19px}
+.question-card{padding:22px}
+.question-aside{padding:18px}
+.wrap{padding:0 24px}
+}
+
+@media(max-width:760px){.wrap{padding:0 16px}
+.brand-row{min-height:68px}
+.brand strong{font-size:17px}
+.logo{width:37px;height:37px}
+.header-note{font-size:11px}
+.header-note .desktop-only{display:none}
+.hero{padding:30px 0 26px;grid-template-columns:1fr;gap:22px}
+.hero h1{font-size:34px}
+.hero p{font-size:14px}
+.overview{padding:18px 22px;justify-content:space-between;flex-direction:row-reverse;gap:15px}
+.overview .ring{width:85px;height:85px;padding:7px}
+.overview .ring strong{font-size:27px}
+.overview h2{margin-bottom:6px}
+.overview p{font-size:12px}
+.toolbar{gap:13px}
+.tabs{max-width:100%;overflow:auto}
+.tab{padding:8px 13px;white-space:nowrap}
+.filter{width:100%;justify-content:space-between}
+.filter select{flex:1;min-width:0;max-width:280px}
+.exam-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+.exam-card.comprehensive{grid-column:1/-1}
+.exam-card .description{min-height:42px}
+.section-heading h2{font-size:19px}
+.section-heading .pill{font-size:10px}
+.exam-topbar .wrap{min-height:75px;grid-template-columns:minmax(0,1fr) auto auto;gap:12px}
+.exam-title{font-size:13px;max-width:250px}
+.exam-subtitle{font-size:10px}
+.timer{font-size:19px}
+.timer-label{font-size:8px;letter-spacing:.03em}
+.top-actions .btn{padding:8px 10px;font-size:12px}
+.top-actions .home-review{display:none}
+.exam-layout{display:block;padding-top:18px;padding-bottom:85px}
+.question-card{padding:20px;margin-bottom:14px}
+.question-text{font-size:15px}
+.question-aside{display:none;position:fixed;z-index:50;bottom:0;top:auto;left:0;right:0;border-radius:20px 20px 0 0;max-height:76vh;overflow-y:auto;padding:22px 22px calc(22px + env(safe-area-inset-bottom))}
+.question-aside.drawer-open{display:block}
+.close-drawer{display:block}
+.question-grid{grid-template-columns:repeat(auto-fill,minmax(36px,1fr))}
+.mobile-grid-toggle{display:flex;position:fixed;bottom:calc(18px + env(safe-area-inset-bottom));right:18px;z-index:30;box-shadow:0 5px 25px #1E6BFF44}
+.statement-row{display:block}
+.tf-controls{margin-top:12px;justify-content:flex-end}
+.tf-choice{padding:8px 18px}
+.result-wrap{padding:24px 16px}
+.result-card{padding:24px 18px}
+.result-card h1{font-size:23px}
+.result-main{gap:26px}
+.result-ring{width:120px;height:120px}
+.big-score{font-size:53px}
+.stat{padding:14px 6px}
+.stat strong{font-size:20px}
+.stat span{font-size:10px}
+.question-actions{gap:12px}
+.navigation .btn{padding:9px 11px}
+.question-heading{gap:7px}
+.pill{font-size:10px}
+.toast{bottom:85px}
+.choice-mark{white-space:normal;max-width:62px;text-align:right}
+}
+
+@media(max-width:440px){.exam-cards{grid-template-columns:1fr}
+.exam-card .description{min-height:0}
+.hero h1{font-size:31px}
+.hero-chips .pill{font-size:10px}
+.exam-tools{gap:8px}
+.exam-title{max-width:145px}
+.timer{font-size:17px}
+.timer-label{display:none}
+.top-actions .btn{padding:8px}
+.exam-topbar .wrap{gap:9px}
+.question-card{padding:17px}
+.option{padding:12px;gap:10px;font-size:14px}
+.letter{min-width:28px;height:28px}
+.question-actions{align-items:stretch}
+.flag-button{width:100%;justify-content:center;order:2}
+.navigation{width:100%;justify-content:space-between}
+.result-stats{grid-template-columns:repeat(2,1fr)}
+.stat:nth-child(2){border-right:0}
+.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+.result-main{gap:21px}
+.result-ring{width:105px;height:105px}
+.big-score{font-size:46px}
+.modal-head{padding:20px 18px 0}
+.modal-body{padding:18px}
+.header-note{max-width:95px;text-align:right}
+.result-actions .btn{flex:1}
+.history-table th,.history-table td{padding:13px 15px}
+.overview h2{font-size:15px}
+}
+
+@media(max-height:500px) and (orientation:landscape){.exam-topbar .wrap{min-height:56px}
+.question-aside{max-height:85vh}
+.modal{max-height:calc(100vh - 24px)}
+.modal-backdrop{padding:12px}
+.question-card{scroll-margin-top:73px}
+html{scroll-padding-top:78px}
+}
+
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+*{transition:none!important}
+}
+
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Đến nội dung chính</a>
+<header id="header"></header>
+<main id="main" tabindex="-1"></main>
+<footer id="footer" class="footer">Trạm ôn tập <span>Hóa học 12</span> · Học để hiểu, luyện để vững.</footer>
+<div id="modal-root"></div>
+<div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+<script>
+/* DỮ LIỆU ĐỀ: answer là chỉ số 0–3 của phương án đúng trước khi đảo.
+   Câu đúng–sai có statements[].answer là true/false.
+   Các trường original… và editNote lưu nội dung trước khi biên tập. */
+const QUESTIONS = [
+  {
+    "id": "c1-m1",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 1,
+    "prompt": "Ester no, đơn chức, mạch hở có công thức phân tử là",
+    "options": [
+      "CnH2nO (n≥2).",
+      "CnH2nO2 (n≥2).",
+      "CnHnO3 (n≥2).",
+      "CnH2nO4 (n≥2)."
+    ],
+    "needReview": false,
+    "answer": 1,
+    "explanation": "Ester no, đơn chức, mạch hở có công thức CnH2nO2 (n ≥ 2); nhóm carbonyl tạo một độ bất bão hòa."
+  },
+  {
+    "id": "c1-m2",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 2,
+    "prompt": "Số đồng phân ester ứng với công thức phân tử C3H6O2 là",
+    "options": [
+      "2.",
+      "3.",
+      "5.",
+      "4."
+    ],
+    "needReview": false,
+    "answer": 0,
+    "explanation": "Có hai ester: HCOOCH2CH3 (ethyl formate) và CH3COOCH3 (methyl acetate)."
+  },
+  {
+    "id": "c1-m3",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 3,
+    "prompt": "Tên gọi của ester CH3COOC2H5 là",
+    "options": [
+      "Ethyl formate.",
+      "Ethyl acetate.",
+      "Methyl acetate.",
+      "Methyl formate."
+    ],
+    "needReview": false,
+    "answer": 1,
+    "explanation": "CH3COO– là gốc acetate; –C2H5 là ethyl, nên tên ester là ethyl acetate."
+  },
+  {
+    "id": "c1-m4",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 4,
+    "prompt": "Ester nào sau đây được sử dụng để điều chế thủy tinh hữu cơ?",
+    "options": [
+      "Vinyl acetate.",
+      "methyl acrylate.",
+      "Isopropyl acetate",
+      "Methyl methacrylate."
+    ],
+    "needReview": false,
+    "answer": 3,
+    "explanation": "Methyl methacrylate CH2=C(CH3)COOCH3 trùng hợp tạo poly(methyl methacrylate), dùng làm thủy tinh hữu cơ."
+  },
+  {
+    "id": "c1-m5",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 5,
+    "prompt": "Ester nào sau đây có mùi thơm của chuối chín?",
+    "options": [
+      "Isoamyl acetate.",
+      "Propyl acetate.",
+      "Isopropyl acetate.",
+      "Benzyl acetate."
+    ],
+    "needReview": false,
+    "answer": 0,
+    "explanation": "Isoamyl acetate có mùi chuối chín đặc trưng, thường được dùng làm hương liệu."
+  },
+  {
+    "id": "c1-m6",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 6,
+    "prompt": "Số nguyên tử hydrogen trong phân tử methyl formate là",
+    "options": [
+      "6.",
+      "8.",
+      "4.",
+      "2."
+    ],
+    "needReview": false,
+    "answer": 2,
+    "explanation": "Methyl formate có công thức HCOOCH3, tức C2H4O2, chứa 4 nguyên tử hydrogen."
+  },
+  {
+    "id": "c1-m7",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 7,
+    "prompt": "Benzyl acetate là ester có mùi thơm của hoa nhài.\nCông thức của benzyl acetate là",
+    "options": [
+      "CH3COOC6H5.",
+      "CH3COOCH2C6H5.",
+      "C2H5COOCH3.",
+      "CH3COOCH3."
+    ],
+    "needReview": false,
+    "answer": 1,
+    "explanation": "Benzyl là gốc C6H5CH2–; benzyl acetate có công thức CH3COOCH2C6H5."
+  },
+  {
+    "id": "c1-m8",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 8,
+    "prompt": "Ethyl propionate là ester có mùi thơm của dứa.\nCông thức của ethyl propionate là",
+    "options": [
+      "HCOOC2H5.",
+      "C2H5COOC2H5.",
+      "C2H5COOCH3.",
+      "CH3COOCH3."
+    ],
+    "needReview": false,
+    "answer": 1,
+    "explanation": "Gốc propionate là C2H5COO–; kết hợp với ethyl cho C2H5COOC2H5."
+  },
+  {
+    "id": "c1-m9",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 9,
+    "prompt": "Trong số các chất sau đây, chất nào có nhiệt độ sôi thấp nhất?",
+    "options": [
+      "C3H7OH",
+      "C2H5COOH",
+      "C2H5COONa",
+      "CH3COOCH3"
+    ],
+    "needReview": false,
+    "answer": 3,
+    "explanation": "CH3COOCH3 không tự tạo liên kết hydrogen giữa các phân tử; alcohol và acid có liên kết hydrogen, còn muối có tương tác ion mạnh."
+  },
+  {
+    "id": "c1-m10",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 10,
+    "prompt": "Chất béo là triester của acid béo với",
+    "options": [
+      "methyl alcohol.",
+      "ethylen glicol.",
+      "ethyl alcohol.",
+      "glycerol."
+    ],
+    "needReview": false,
+    "answer": 3,
+    "explanation": "Chất béo là triester của glycerol C3H5(OH)3 với các acid béo."
+  },
+  {
+    "id": "c1-m11",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 11,
+    "prompt": "Palmitic acid là một acid béo có trong mỡ động vật và dầu cọ. Công thức của palmitic acid là",
+    "options": [
+      "C3H5(OH)3.",
+      "CH3COOH.",
+      "C15H31COOH.",
+      "C17H35 COOH."
+    ],
+    "needReview": false,
+    "answer": 2,
+    "explanation": "Palmitic acid có 16 nguyên tử carbon: CH3(CH2)14COOH, viết gọn C15H31COOH."
+  },
+  {
+    "id": "c1-m12",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 12,
+    "prompt": "Số nguyên tử hydrogen trong phân tử stearic acid là",
+    "options": [
+      "33.",
+      "36.",
+      "34.",
+      "31."
+    ],
+    "needReview": false,
+    "answer": 1,
+    "explanation": "Stearic acid là C17H35COOH, tức C18H36O2, chứa 36 nguyên tử hydrogen."
+  },
+  {
+    "id": "c1-m13",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 13,
+    "prompt": "Thành phần chính của xà phòng là",
+    "options": [
+      "muối calcium hoặc magnesium của acid béo.",
+      "muối của acid vô cơ.",
+      "muối sodium hoặc potassium của acid béo.",
+      "muối sodium hoặc potassium của acid vô cơ."
+    ],
+    "needReview": false,
+    "answer": 2,
+    "explanation": "Thành phần chính của xà phòng là muối sodium hoặc potassium của acid béo, chẳng hạn C17H35COONa.",
+    "originalPrompt": "Thành phần chính của xà phòng là",
+    "originalOptions": [
+      "muối của acid béo.",
+      "muối của acid vô cơ.",
+      "muối sodium hoặc potassium của acid béo.",
+      "muối sodium hoặc potassium của acid."
+    ],
+    "editNote": "Sửa phương án A và D để loại các mô tả quá rộng bao hàm đáp án C; giữ nguyên câu hỏi và đáp án đúng C."
+  },
+  {
+    "id": "c1-m14",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 14,
+    "prompt": "Phần kị nước trong xà phòng và chất giặt rửa là",
+    "options": [
+      "nhóm carboxylate.",
+      "nhóm sulfate.",
+      "gốc hydrocarbon dài.",
+      "nhóm sulfonate."
+    ],
+    "needReview": false,
+    "answer": 2,
+    "explanation": "Gốc hydrocarbon dài ít phân cực là phần kị nước, có khả năng tương tác với dầu mỡ."
+  },
+  {
+    "id": "c1-m15",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 15,
+    "prompt": "Phần ưa nước trong xà phòng là",
+    "options": [
+      "nhóm carboxylate.",
+      "nhóm sulfate.",
+      "gốc hydrocarbon dài.",
+      "nhóm sulfonate."
+    ],
+    "needReview": false,
+    "answer": 0,
+    "explanation": "Nhóm carboxylate –COO− mang điện, tương tác với nước và tạo đầu ưa nước của xà phòng."
+  },
+  {
+    "id": "c1-m16",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 16,
+    "prompt": "Nguyên liệu nào sau đây dùng để điều chế chất giặt rửa tự nhiên?",
+    "options": [
+      "Dầu mỏ.",
+      "Mỡ động vật.",
+      "Gỗ.",
+      "Bồ kết."
+    ],
+    "needReview": false,
+    "answer": 3,
+    "explanation": "Bồ kết chứa saponin có tính hoạt động bề mặt, dùng làm chất giặt rửa tự nhiên."
+  },
+  {
+    "id": "c1-m17",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 17,
+    "prompt": "Không nên dùng xà phòng khi giặt rửa với nước cứng vì",
+    "options": [
+      "cần dùng lượng nước nhiều hơn.",
+      "xuất hiện kết tủa làm giảm tác dụng giặt rửa của xà phòng.",
+      "gây ô nhiễm môi trường.",
+      "ion Ca2+, Mg2+ làm giảm độ bền sợi vải."
+    ],
+    "needReview": false,
+    "answer": 1,
+    "explanation": "Ca2+ và Mg2+ trong nước cứng tạo muối acid béo ít tan, làm giảm lượng xà phòng có tác dụng giặt rửa."
+  },
+  {
+    "id": "c1-m18",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 18,
+    "prompt": "Chất nào sau đây là thành phần chủ yếu của xà phòng?",
+    "options": [
+      "CH3COONa.",
+      "CH3(CH2)3COONa.",
+      "CH2=CHCOONa.",
+      "C17H35COONa."
+    ],
+    "needReview": false,
+    "answer": 3,
+    "explanation": "C17H35COONa là sodium stearate, muối sodium của một acid béo mạch dài."
+  },
+  {
+    "id": "c1-m19",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 19,
+    "prompt": "Chất nào sau đây là chất giặt rửa tổng hợp?",
+    "options": [
+      "C3H5(OH)3.",
+      "CH3[CH2]16COONa.",
+      "CH3[CH2]4COONa.",
+      "CH3[CH2]15SO3Na."
+    ],
+    "needReview": false,
+    "answer": 3,
+    "explanation": "CH3(CH2)15SO3Na là muối sodium alkylsulfonate, thuộc nhóm chất giặt rửa tổng hợp; muối carboxylate mạch dài thuộc xà phòng."
+  },
+  {
+    "id": "c1-m20",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 20,
+    "prompt": "Ester X có công thức phân tử C4H8O2. Thủy phân X trong dung dịch H2SO4 loãng, đun nóng, thu được sản phẩm gồm acetic acid và chất hữu cơ Y. Công thức của Y là",
+    "options": [
+      "HCOOH.",
+      "CH3OH.",
+      "CH3COOH.",
+      "C2H5OH."
+    ],
+    "needReview": false,
+    "answer": 3,
+    "explanation": "X có 4 carbon; phần acetate có 2 carbon nên phần alcohol có 2 carbon. X là CH3COOC2H5, thủy phân tạo C2H5OH."
+  },
+  {
+    "id": "c1-m21",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 21,
+    "prompt": "Thủy phân hoàn toàn hỗn hợp ethyl propionate và ethyl formate trong dung dịch NaOH, thu được sản phẩm gồm",
+    "options": [
+      "1 muối và 1 alcohol.",
+      "2 muối và 2 alcohol.",
+      "1 muối và 2 alcohol.",
+      "2 muối và 1 alcohol."
+    ],
+    "needReview": false,
+    "answer": 3,
+    "explanation": "C2H5COOC2H5 và HCOOC2H5 phản ứng với NaOH cho hai muối C2H5COONa, HCOONa và cùng một alcohol C2H5OH."
+  },
+  {
+    "id": "c1-m22",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 22,
+    "prompt": "Phát biểu nào sau đây sai?",
+    "options": [
+      "Ethyl acetate có công thức phân tử là C4H8O2.",
+      "Phân tử methyl methacrylate có một liên kết π trong phân tử.",
+      "Methyl acrylate có khả năng tham gia phản ứng cộng Br2 trong dung dịch.",
+      "Ethyl formate có khả năng tham gia phản ứng tráng bạc."
+    ],
+    "needReview": false,
+    "answer": 1,
+    "explanation": "Methyl methacrylate CH2=C(CH3)COOCH3 có hai liên kết π: một ở C=C và một ở C=O. Nhận định chỉ có một liên kết π là sai."
+  },
+  {
+    "id": "c1-m23",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 23,
+    "prompt": "Thủy phân ester X có công thức C4H8O2, thu được ethyl alcohol. Tên gọi của X là",
+    "options": [
+      "ethyl propionate.",
+      "methyl acetate.",
+      "methyl propionate.",
+      "ethyl acetate."
+    ],
+    "needReview": false,
+    "answer": 3,
+    "explanation": "Ester C4H8O2 tạo ethanol phải có phần –OC2H5; phần acid còn 2 carbon, nên là ethyl acetate CH3COOC2H5."
+  },
+  {
+    "id": "c1-m24",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 24,
+    "prompt": "Để biến một số dầu thành mỡ rắn hoặc bơ nhân tạo người ta thực hiện quá trình này sau đây:",
+    "options": [
+      "Cô cạn ở nhiệt độ cao.",
+      "Hydrogen hóa (xt, to, p).",
+      "Làm lạnh.",
+      "Phản ứng xà phòng hóa."
+    ],
+    "needReview": false,
+    "answer": 1,
+    "explanation": "Hydrogen hóa một phần các liên kết C=C của dầu với xúc tác thích hợp làm tăng độ no và nhiệt độ nóng chảy, thu sản phẩm rắn hơn."
+  },
+  {
+    "id": "c1-m25",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 25,
+    "prompt": "Từ phổ khối lượng, phân tử khối của ester X được xác định là 74. Công thức phù hợp với X là",
+    "options": [
+      "HCOOCH3.",
+      "C4H9OH.",
+      "C2H5COOH.",
+      "CH3COOCH3."
+    ],
+    "needReview": false,
+    "answer": 3,
+    "explanation": "CH3COOCH3 có M = 3×12 + 6×1 + 2×16 = 74 và thuộc loại ester; các chất M = 74 khác trong lựa chọn không phải ester."
+  },
+  {
+    "id": "c1-m26",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 26,
+    "prompt": "Xà phòng và chất giặt rửa có khả năng tẩy rửa là do phân tử của chúng có",
+    "options": [
+      "hai đầu phân cực.",
+      "hai đầu không phân cực.",
+      "một đầu phân cực và một đầu không phân cực.",
+      "một đầu kị nước và một đầu ưa dầu."
+    ],
+    "needReview": false,
+    "answer": 2,
+    "explanation": "Mỗi tiểu phân chất giặt rửa có đầu phân cực ưa nước và đuôi hydrocarbon không phân cực ưa dầu, giúp phân tán dầu mỡ vào nước."
+  },
+  {
+    "id": "c1-m27",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 27,
+    "prompt": "Dầu mỡ để lâu bị ôi là do",
+    "options": [
+      "chất béo bị rữa ra.",
+      "chất béo bị khử chậm bởi oxygen không khí.",
+      "liên kết đôi C=C trong chất béo bị oxi hóa chậm bởi oxygen không khí tạo chất có mùi khó chịu.",
+      "chất béo bị thủy phân tạo glycerol có mùi ôi đặc trưng."
+    ],
+    "needReview": false,
+    "answer": 2,
+    "explanation": "Các vị trí không no trong dầu mỡ bị oxygen không khí oxi hóa chậm, sinh ra aldehyde, ketone, acid... có mùi khó chịu. Đây là nguyên nhân chính của hiện tượng ôi.",
+    "originalPrompt": "Dầu mỡ để lâu bị ôi là do",
+    "originalOptions": [
+      "chất béo bị rữa ra.",
+      "chất béo bị oxygen hoá chậm bởi oxygen không khí.",
+      "liên kết đôi C=C trong chất béo bị oxi hóa chậm bởi oxygen không khí tạo chất có mùi khó chịu.",
+      "chất béo bị thủy phân với nước trong không khí."
+    ],
+    "editNote": "Phương án B gốc cũng mô tả đúng sự oxi hóa gây ôi. Sửa “oxygen hoá” thành “khử” để chỉ còn C đúng. Sửa thêm D thành nhận định sai rõ ràng: glycerol không có mùi ôi đặc trưng. Các nhãn phương án trong ghi chú là nhãn của đề gốc."
+  },
+  {
+    "id": "c1-m28",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 28,
+    "prompt": "Chất X tác dụng với dung dịch NaOH vừa đủ, thu được hai chất Y và Z. Cho Z tác dụng với dung dịch AgNO3 trong NH3 thu được chất hữu cơ T. Cho T tác dụng với dung dịch NaOH lại thu được chất Y. Chất X là",
+    "options": [
+      "CH3COOCH=CH2.",
+      "HCOOCH3.",
+      "CH3COOCH=CH – CH3.",
+      "HCOOCH=CH2."
+    ],
+    "needReview": false,
+    "answer": 0,
+    "explanation": "CH3COOCH=CH2 + NaOH → CH3COONa (Y) + CH3CHO (Z). Z bị thuốc thử Tollens oxi hóa thành CH3COONH4 (T); T + NaOH → CH3COONa + NH3 + H2O."
+  },
+  {
+    "id": "c1-m29",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 29,
+    "prompt": "Phát biểu nào sau đây đúng ?",
+    "options": [
+      "Sử dụng xà phòng chung với giấm ăn không làm giảm khả năng giặt rửa của xà phòng.",
+      "Xà phòng được sản xuất từ chất béo bằng phản ứng este hóa.",
+      "Nước Javel và banking soda là các chất giặt rửa có nguồn gốc vô cơ.",
+      "Sodium laurylsunfate là chất giặt rửa tổng hợp."
+    ],
+    "needReview": false,
+    "answer": 3,
+    "explanation": "Sodium lauryl sulfate (sodium dodecyl sulfate) là chất giặt rửa tổng hợp. Giấm làm xà phòng giảm khả năng giặt rửa do tạo acid béo ít tan; xà phòng được sản xuất bằng xà phòng hóa.",
+    "originalPrompt": "Phát biểu nào sau đây đúng ?",
+    "originalOptions": [
+      "Sử dụng xà phòng chung với giấm ăn sẽ mất khả năng giặt rửa do tạo acid béo khó tan trong nước.",
+      "Xà phòng được sản xuất từ chất béo bằng phản ứng este hóa.",
+      "Nước Javel và banking soda là các chất giặt rửa có nguồn gốc vô cơ.",
+      "Sodium laurylsunfate là chất giặt rửa tổng hợp."
+    ],
+    "editNote": "Bản gốc có cả A và D đúng. Sửa A thành phát biểu sai; D là đáp án duy nhất. Nước Javel và baking soda là chất tẩy/làm sạch vô cơ, không phải chất giặt rửa hoạt động bề mặt theo định nghĩa đang xét."
+  },
+  {
+    "id": "c1-m30",
+    "chapter": 1,
+    "type": "mcq",
+    "number": 30,
+    "prompt": "Tiến hành thí nghiệm theo các bước sau:\nBước 1: Cho vào cốc thủy tinh chịu nhiệt khoảng 5 gam dầu dừa và 10 mL dung dịch NaOH 40%.\nBước 2: Đun sôi nhẹ hỗn hợp, liên tục khuấy đều bằng đũa thủy tinh khoảng 30 phút và thỉnh thoảng thêm nước cất để giữ cho thể tích hỗn hợp không đổi. Để nguội hỗn hợp.\nBước 3: Rót vào hỗn hợp 15 - 20 mL dung dịch NaCl bão hòa, nóng, khuấy nhẹ rồi để yên.\nPhát biểu nào sau đây về thí nghiệm trên sai?",
+    "options": [
+      "Sau bước 3, thấy có lớp chất rắn màu trắng nổi lên là glycerol.",
+      "Ở bước 3, thêm dung dịch NaCl bão hòa là để tách muối của acid béo ra khỏi hỗn hợp.",
+      "Ở bước 2, việc thêm nước cất để đảm bảo phản ứng thủy phân xảy ra.",
+      "Trong thí nghiệm trên, có xảy ra phản ứng xà phòng hóa chất béo."
+    ],
+    "needReview": false,
+    "answer": 0,
+    "explanation": "Chất rắn trắng nổi lên là muối sodium của acid béo (xà phòng), không phải glycerol. NaCl bão hòa giúp tách xà phòng; glycerol ở trong pha dung dịch."
+  },
+  {
+    "id": "c1-t1",
+    "chapter": 1,
+    "type": "tf",
+    "number": 1,
+    "prompt": "Khi thay thế nhóm -OH ở nhóm carboxyl (-COOH) của carboxylic acid bằng nhóm -OR’ thì được ester.",
+    "statements": [
+      {
+        "text": "Nhóm chức của ester là -COO-.",
+        "answer": true,
+        "explanation": "Nhóm chức ester là –C(=O)–O–, thường viết gọn –COO–."
+      },
+      {
+        "text": "Công thức của ester đơn chức là RCOOR’ (R, R’ phải là gốc hydrocarbon).",
+        "answer": false,
+        "explanation": "Trong công thức RCOOR′, R có thể là H (ester của formic acid); vì vậy không bắt buộc cả R và R′ đều là gốc hydrocarbon."
+      },
+      {
+        "text": "Ester no, đơn chức, mạch hở có công thức chung là CnH2nO2 (n ≥ 2).",
+        "answer": true,
+        "explanation": "Ester no, đơn chức, mạch hở có công thức chung CnH2nO2 với n ≥ 2."
+      },
+      {
+        "text": "Phổ IR của ester có peak đặc trưng ở số sóng 3000 cm-1.",
+        "answer": false,
+        "explanation": "Peak đặc trưng mạnh của liên kết C=O trong ester thường ở khoảng 1735–1750 cm⁻¹; 3000 cm⁻¹ không phải peak carbonyl đặc trưng của ester."
+      }
+    ],
+    "needReview": false
+  },
+  {
+    "id": "c1-t2",
+    "chapter": 1,
+    "type": "tf",
+    "number": 2,
+    "prompt": "Cho các hợp chất hữu cơ: CH3OH, C2H5COOH, HCOOCH3, CH3COOC2H5, CH3CHO, HCOOCH=CH2, (COOCH3)2.",
+    "statements": [
+      {
+        "text": "Có 3 hợp chất thuộc loại ester.",
+        "answer": false,
+        "explanation": "Có 4 ester: HCOOCH3, CH3COOC2H5, HCOOCH=CH2 và (COOCH3)2."
+      },
+      {
+        "text": "Có 1 hợp chất là ester no, đơn chức, mạch hở.",
+        "answer": false,
+        "explanation": "Có 2 ester no, đơn chức, mạch hở: HCOOCH3 và CH3COOC2H5."
+      },
+      {
+        "text": "Có 1 hợp chất là ester không no, 1C=C, đơn chức, mạch hở.",
+        "answer": true,
+        "explanation": "Chỉ HCOOCH=CH2 là ester đơn chức, mạch hở, có một liên kết C=C."
+      },
+      {
+        "text": "Có 1 hợp chất là ester no, hai chức, mạch hở.",
+        "answer": true,
+        "explanation": "(COOCH3)2 là dimethyl oxalate CH3OOC–COOCH3, ester no, hai chức, mạch hở."
+      }
+    ],
+    "needReview": false
+  },
+  {
+    "id": "c1-t3",
+    "chapter": 1,
+    "type": "tf",
+    "number": 3,
+    "prompt": "Cho các hợp chất hữu cơ: CH3COOH, HCOOCH3, C2H5OH.",
+    "statements": [
+      {
+        "text": "Nhiệt độ sôi tăng dần theo thứ tự: C2H5OH, HCOOCH3, CH3COOH.",
+        "answer": false,
+        "explanation": "Thứ tự đúng: HCOOCH3 (khoảng 32 °C) < C2H5OH (khoảng 78 °C) < CH3COOH (khoảng 118 °C)."
+      },
+      {
+        "text": "Nhiệt độ sôi của HCOOCH3 thấp hơn CH3COOH do giữa các phân tử HCOOCH3 không tạo được liên kết hydrogen.",
+        "answer": true,
+        "explanation": "Các phân tử methyl formate không tự tạo liên kết hydrogen với nhau; acetic acid có thể tạo liên kết hydrogen mạnh giữa các phân tử."
+      },
+      {
+        "text": "Các chất trên đều tan tốt trong nước ở điều kiện thường.",
+        "answer": false,
+        "explanation": "Acetic acid và ethanol trộn lẫn với nước; methyl formate chỉ tan hữu hạn. Cụm “tan tốt” mang tính định tính và cần đối chiếu cách dùng trong tài liệu/SGK trước khi chốt đáp án."
+      },
+      {
+        "text": "Ở điều kiện thường, các chất trên đều là chất lỏng.",
+        "answer": true,
+        "explanation": "Ở điều kiện thường (khoảng 25 °C, áp suất khí quyển), cả ba chất đều ở thể lỏng; methyl formate dễ bay hơi."
+      }
+    ],
+    "needReview": true,
+    "reviewNote": "Giữ nguyên câu hỏi. Ý c dùng cụm “tan tốt” định tính nên cần người dùng xác nhận theo tài liệu đang học; đáp án tạm chọn Sai do methyl formate chỉ tan hữu hạn."
+  },
+  {
+    "id": "c1-t4",
+    "chapter": 1,
+    "type": "tf",
+    "number": 4,
+    "prompt": "Ethyl propionate là một ester có mùi dứa chín.",
+    "statements": [
+      {
+        "text": "Công thức của ethyl propionate là CH3COOC2H5.",
+        "answer": false,
+        "explanation": "Ethyl propionate có công thức C2H5COOC2H5; CH3COOC2H5 là ethyl acetate."
+      },
+      {
+        "text": "Ở điều kiện thường, ethyl propionate là chất khí.",
+        "answer": false,
+        "explanation": "Ethyl propionate ở thể lỏng ở điều kiện thường, không phải chất khí."
+      },
+      {
+        "text": "Phản ứng thủy phân ethyl propionate trong môi trường acid là phản ứng thuận nghịch.",
+        "answer": true,
+        "explanation": "Thủy phân ester trong môi trường acid là phản ứng thuận nghịch với phản ứng ester hóa."
+      },
+      {
+        "text": "Ethyl propionate được điều chế từ propanoic acid và ethyl alcohol.",
+        "answer": true,
+        "explanation": "C2H5COOH + C2H5OH ⇌ C2H5COOC2H5 + H2O (xúc tác acid, đun nóng)."
+      }
+    ],
+    "needReview": false
+  },
+  {
+    "id": "c1-t5",
+    "chapter": 1,
+    "type": "tf",
+    "number": 5,
+    "prompt": "Chất béo và acid béo có nhiều ứng dụng quan trọng.",
+    "statements": [
+      {
+        "text": "Chất béo là nguồn cung cấp và dự trữ năng lượng ở người và động vật.",
+        "answer": true,
+        "explanation": "Chất béo cung cấp năng lượng và được dự trữ trong mô mỡ ở người, động vật."
+      },
+      {
+        "text": "Trong công nghiệp, chất béo dùng để chế biến thực phẩm, sản xuất xà phòng và glycerol, …",
+        "answer": true,
+        "explanation": "Chất béo là nguyên liệu chế biến thực phẩm và sản xuất xà phòng, glycerol qua phản ứng xà phòng hóa."
+      },
+      {
+        "text": "Acid béo omega – 3 và omega – 6 là các acid béo không no với liên kết đôi đầu tiên ở vị trí số 3 và só 6 khi đánh số từ nhóm COOH.",
+        "answer": false,
+        "explanation": "Vị trí omega được đếm từ đầu methyl –CH3 xa nhóm –COOH, không phải đếm từ nhóm carboxyl."
+      },
+      {
+        "text": "Acid béo omega – 3 và omega – 6 đều có vai trò quan trọng đối với cơ thể, giúp phòng ngừa nhiều bệnh như bệnh về tim, động mạch vành, …",
+        "answer": true,
+        "explanation": "Các acid béo omega-3 và omega-6 có vai trò sinh học quan trọng; bổ sung cân đối trong chế độ ăn góp phần bảo vệ sức khỏe tim mạch."
+      }
+    ],
+    "needReview": false
+  },
+  {
+    "id": "c1-t6",
+    "chapter": 1,
+    "type": "tf",
+    "number": 6,
+    "prompt": "Aspirin là một hợp chất được sử dụng làm giảm đau, hạ sốt, có công thức:\nKhi aspirin bị thủy phân trong cơ thể sẽ tạo thành acid salicylic. Salicylic acid ức chế quá trình sinh tổng hợp prostaglandin (chất gây đau, sốt và viêm khi nồng độ trong máu cao hơn mức bình thường).",
+    "statements": [
+      {
+        "text": "Công thức phân tử của aspirin là C9H8O4.",
+        "answer": true,
+        "explanation": "Aspirin (acetylsalicylic acid) có công thức phân tử C9H8O4."
+      },
+      {
+        "text": "Trong một phân tử aspirin có chứa 6 liên kết pi.",
+        "answer": false,
+        "explanation": "Aspirin có 5 liên kết π: 3 ở vòng benzene và 2 ở hai nhóm carbonyl C=O."
+      },
+      {
+        "text": "Công thức cấu tạo thu gọn của salicylic acid là C6H4(COOH)2.",
+        "answer": false,
+        "explanation": "Salicylic acid là o-HOC6H4COOH, chứa một nhóm phenol và một nhóm carboxyl; C6H4(COOH)2 là benzenedicarboxylic acid."
+      },
+      {
+        "text": "Thủy phân aspirin trong môi trường base sẽ thu được muối và alcohol.",
+        "answer": false,
+        "explanation": "Nhóm ester của aspirin gắn với oxygen phenol. Thủy phân kiềm thu muối acetate và muối salicylate (có thể cả phenolate khi kiềm dư), không thu alcohol."
+      }
+    ],
+    "needReview": false
+  },
+  {
+    "id": "c1-t7",
+    "chapter": 1,
+    "type": "tf",
+    "number": 7,
+    "prompt": "Chất béo là triester (ester ba chức) của glycerol với các acid béo.",
+    "statements": [
+      {
+        "text": "Acid béo là những carboxylic acid đa chức, thường có mạch hở, không phân nhánh và có số nguyên tử carbon chẵn (khoảng 12 – 24C).",
+        "answer": false,
+        "explanation": "Acid béo là carboxylic acid đơn chức, thường có mạch carbon dài, không phân nhánh và số carbon chẵn; không phải acid đa chức."
+      },
+      {
+        "text": "Công thức của glycerol là C3H5(OH)3.",
+        "answer": true,
+        "explanation": "Glycerol là propane-1,2,3-triol, có công thức C3H5(OH)3."
+      },
+      {
+        "text": "Công thức chung của chất béo tạo bởi glycerol với 1 acid béo RCOOH là (RCOO)3C3H5.",
+        "answer": true,
+        "explanation": "Ba nhóm –OH của glycerol tạo ba liên kết ester với ba phân tử cùng một acid béo, cho (RCOO)3C3H5."
+      },
+      {
+        "text": "Chất béo còn được gọi là glyceride.",
+        "answer": true,
+        "explanation": "Theo cách gọi trong chương trình phổ thông, chất béo còn được gọi là triglyceride hay triacylglycerol; có thể gọi gọn là glyceride trong ngữ cảnh chất béo."
+      }
+    ],
+    "needReview": false
+  },
+  {
+    "id": "c1-t8",
+    "chapter": 1,
+    "type": "tf",
+    "number": 8,
+    "prompt": "Chất giặt rửa tự nhiên và tổng hợp cũng có tác dụng giặt rửa như xà phòng.",
+    "statements": [
+      {
+        "text": "Thành phần của chất giặt rửa tự nhiên là muối sodium, potassium của các acid béo.",
+        "answer": false,
+        "explanation": "Chất giặt rửa tự nhiên trong bồ hòn, bồ kết chủ yếu nhờ saponin; muối sodium/potassium của acid béo là thành phần chính của xà phòng."
+      },
+      {
+        "text": "Thành phần của chất giặt rửa tổng hợp thường là các muối sodium như sodium alkylsulfate (R-OSO3Na), sodium alkylbenzenesulfonate (R-C6H4-SO3Na), … (R là gốc alkyl dài).",
+        "answer": true,
+        "explanation": "Sodium alkylsulfate R–OSO3Na và sodium alkylbenzenesulfonate R–C6H4–SO3Na (R là gốc alkyl dài) là các chất hoạt động bề mặt tổng hợp điển hình."
+      },
+      {
+        "text": "Nước bồ hòn, bồ kết là các chất giặt rửa tự nhiên.",
+        "answer": true,
+        "explanation": "Nước bồ hòn, bồ kết chứa saponin có tác dụng giặt rửa tự nhiên."
+      },
+      {
+        "text": "Xà phòng cũng là một loại chất giặt rửa tổng hợp.",
+        "answer": false,
+        "explanation": "Trong phân loại của bài học, xà phòng được tách thành nhóm riêng với chất giặt rửa tổng hợp; xà phòng là muối acid béo."
+      }
+    ],
+    "needReview": false,
+    "originalStatements": [
+      "Thành phần của chất giặt rửa tự nhiên là muối sodium, potassium của các acid béo.",
+      "Thành phần của chất giặt rửa tổng hợp thường là các muối sodium như sodium alkylsulfate (R-OSO3Na), sodium alkylbenzenesulfonate (R-SO3Na), …",
+      "Nước bồ hòn, bồ kết là các chất giặt rửa tự nhiên.",
+      "Xà phòng cũng là một loại chất giặt rửa tổng hợp."
+    ],
+    "editNote": "Sửa công thức sodium alkylbenzenesulfonate ở ý b từ R–SO3Na thành R–C6H4–SO3Na, xác định R là gốc alkyl dài để tránh nhầm với alkylsulfonate."
+  },
+  {
+    "id": "c1-t9",
+    "chapter": 1,
+    "type": "tf",
+    "number": 9,
+    "prompt": "Linoleic acid là một acid béo.",
+    "statements": [
+      {
+        "text": "Công thức linoleic có thể viết gọn là C17H33COOH.",
+        "answer": false,
+        "explanation": "Linoleic acid có công thức C17H31COOH (C18H32O2); C17H33COOH là công thức của oleic acid."
+      },
+      {
+        "text": "Trong phân tử linoleic acid có chứa 2 liên kết đôi C=C đều ở dạng cis.",
+        "answer": true,
+        "explanation": "Linoleic acid tự nhiên thông thường là (9Z,12Z)-octadeca-9,12-dienoic acid, có hai liên kết C=C đều dạng cis."
+      },
+      {
+        "text": "Linoleic acid thuộc loại acid béo không no, 1C=C, đơn chức, mạch hở.",
+        "answer": false,
+        "explanation": "Linoleic acid có 2 liên kết C=C, không phải 1 liên kết C=C."
+      },
+      {
+        "text": "Linoleic acid là acid béo thuộc nhóm omega – 6.",
+        "answer": true,
+        "explanation": "Liên kết đôi gần đầu methyl nhất bắt đầu ở carbon số 6 tính từ đầu methyl, nên linoleic acid thuộc nhóm omega-6."
+      }
+    ],
+    "needReview": false
+  },
+  {
+    "id": "c1-t10",
+    "chapter": 1,
+    "type": "tf",
+    "number": 10,
+    "prompt": "Xà phòng có tác dụng giặt rửa, loại bỏ vết bẩn.",
+    "statements": [
+      {
+        "text": "Xà phòng là hỗn hợp muối sodium hoặc potassium của các acid béo và các chất phụ gia.",
+        "answer": true,
+        "explanation": "Xà phòng thương mại gồm hỗn hợp muối sodium hoặc potassium của acid béo và các chất phụ gia."
+      },
+      {
+        "text": "Các muối trong xà phòng thường là của acid béo không no như oleic acid và linoleic acid.",
+        "answer": false,
+        "explanation": "Muối thường gặp trong xà phòng là của acid béo no như palmitic acid, stearic acid; không thể khẳng định thường chỉ là muối của các acid béo không no nêu trên."
+      },
+      {
+        "text": "Các phụ gia trong xà phòng thường là chất độn làm tăng độ cứng, dễ đúc thành bánh, chất tạo màu và chất tạo hương, …",
+        "answer": true,
+        "explanation": "Các chất độn, chất tạo màu, chất tạo hương... được thêm vào để điều chỉnh tính chất và hình thức sản phẩm."
+      },
+      {
+        "text": "Phản ứng thủy phân chất béo trong môi trường acid tạo ra xà phòng nên được gọi là phản ứng xà phòng hóa.",
+        "answer": false,
+        "explanation": "Xà phòng hóa là thủy phân chất béo trong môi trường kiềm, tạo glycerol và muối acid béo. Thủy phân trong acid tạo acid béo, không tạo xà phòng."
+      }
+    ],
+    "needReview": false
+  },
+  {
+    "id": "c2-m1",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 1,
+    "prompt": "Hai chất đồng phân của nhau là",
+    "options": [
+      "glucose và tinh bột.",
+      "fructose và glucose.",
+      "fructose và tinh bột.",
+      "saccharose và glucose."
+    ],
+    "answer": 1,
+    "explanation": "Glucose và fructose cùng có công thức phân tử C6H12O6 nhưng khác cấu tạo nên là đồng phân cấu tạo của nhau.",
+    "needReview": false
+  },
+  {
+    "id": "c2-m2",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 2,
+    "prompt": "Carbohydrate thường được biểu diễn dưới dạng hydrate của carbon bằng công thức nào sau đây?",
+    "options": [
+      "Cn(H2O)m.",
+      "CnH2nO.",
+      "CxHyOz.",
+      "R(OH)x(CHO)y."
+    ],
+    "answer": 0,
+    "explanation": "Công thức thường dùng để biểu diễn carbohydrate dưới dạng hydrate của carbon là Cn(H2O)m; đây không phải định nghĩa đủ để nhận biết mọi carbohydrate.",
+    "needReview": false,
+    "originalPrompt": "Carbohydrate là những hợp chất hữu cơ tạp chức thường có công thức chung là",
+    "editNote": "Làm rõ yêu cầu chọn công thức dạng hydrate của carbon; CxHyOz chỉ là công thức tổng quát quá rộng cho hợp chất chứa C, H, O."
+  },
+  {
+    "id": "c2-m3",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 3,
+    "prompt": "Cho dãy các chất tinh bột, cellulose, glucose, fructose, saccharose. Số chất trong dãy thuộc loại monosaccharide là",
+    "options": [
+      "1.",
+      "3.",
+      "4.",
+      "2."
+    ],
+    "answer": 3,
+    "explanation": "Glucose và fructose là hai monosaccharide. Saccharose là disaccharide; tinh bột và cellulose là polysaccharide.",
+    "needReview": false
+  },
+  {
+    "id": "c2-m4",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 4,
+    "prompt": "Hợp chất nào sau đây chiếm thành phần nhiều nhất trong mật ong ?",
+    "options": [
+      "glucose.",
+      "fructose.",
+      "cellulose.",
+      "saccharose."
+    ],
+    "answer": 1,
+    "explanation": "Trong thành phần đường của mật ong thông thường, fructose có hàm lượng lớn nhất, tiếp theo là glucose.",
+    "needReview": false
+  },
+  {
+    "id": "c2-m5",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 5,
+    "prompt": "Glucose là chất dinh dưỡng và được dùng làm thuốc tăng lực cho người già, trẻ em và người ốm. Số nguyên tử carbon trong phân tử glucose là",
+    "options": [
+      "6.",
+      "11.",
+      "5.",
+      "12."
+    ],
+    "answer": 0,
+    "explanation": "Glucose có công thức C6H12O6 nên mỗi phân tử chứa 6 nguyên tử carbon.",
+    "needReview": false
+  },
+  {
+    "id": "c2-m6",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 6,
+    "prompt": "Nhận xét nào dưới đây là không đúng khi nói về glucose và fructose?",
+    "options": [
+      "Đều tạo dược dung dịch màu xanh lam khi tác dụng với Cu(OH)2 trong môi trường kiềm.",
+      "Đều tạo được kết tủa đỏ gạch Cu2O khi tác dụng với Cu(OH)2, đun nóng trong môi trường kiềm.",
+      "Đều làm mất màu nước bromine.",
+      "Đều xảy ra phản ứng tráng bạc khi tác dụng với thuốc thử Tollens."
+    ],
+    "answer": 2,
+    "explanation": "Glucose làm mất màu nước bromine do nhóm aldehyde. Fructose có nhóm ketone nên không phản ứng với nước bromine trong điều kiện thường; trong môi trường kiềm của Tollens, fructose chuyển hóa thành aldose nên vẫn tráng bạc.",
+    "needReview": false
+  },
+  {
+    "id": "c2-m7",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 7,
+    "prompt": "Chất T có các đặc điểm: (1) thuộc loại monosaccharide; (2) có nhiều trong quả nho chín; (3) tác dụng với nước bromine; (4) có phản ứng tráng gương. Chất T là",
+    "options": [
+      "glucose.",
+      "saccharose.",
+      "fructose.",
+      "cellulose."
+    ],
+    "answer": 0,
+    "explanation": "Glucose là đường nho, thuộc monosaccharide, có nhóm aldehyde ở dạng mạch hở nên phản ứng với nước bromine và thuốc thử Tollens.",
+    "needReview": false
+  },
+  {
+    "id": "c2-m8",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 8,
+    "prompt": "Thuốc thử phân biệt glucose với fructose là",
+    "options": [
+      "AgNO3/ NH3.",
+      "Cu(OH)2.",
+      "dung dịch Br2.",
+      "H2."
+    ],
+    "answer": 2,
+    "explanation": "Nước bromine oxi hóa glucose thành gluconic acid, còn fructose không làm mất màu nước bromine ở điều kiện thường. Cả hai đều tráng bạc nên Tollens không phân biệt được.",
+    "needReview": false
+  },
+  {
+    "id": "c2-m9",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 9,
+    "prompt": "Glucose và fructose hòa tan Cu(OH)2 ở nhiệt độ thường tạo dung dịch xanh lam.Trong phản ứng này đã thể hiện tính chất của loại nhóm chức nào của glucose và fructose",
+    "options": [
+      "Tính chất polyalcohol.",
+      "Tính chất aldehyde",
+      "Tính chất ketone.",
+      "Tính chất nhóm –OH hemiacetal."
+    ],
+    "answer": 0,
+    "explanation": "Các nhóm –OH kề nhau tạo phức tan màu xanh lam với Cu(OH)2; đây là tính chất của polyalcohol.",
+    "needReview": false
+  },
+  {
+    "id": "c2-m10",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 10,
+    "prompt": "Số nguyên tử oxygen trong phân tử saccharose là",
+    "options": [
+      "11",
+      "6",
+      "5",
+      "12."
+    ],
+    "answer": 0,
+    "explanation": "Saccharose có công thức C12H22O11, chứa 11 nguyên tử oxygen.",
+    "needReview": false
+  },
+  {
+    "id": "c2-m11",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 11,
+    "prompt": "Maltose là một loại disaccharide có nhiều trong mạch nha. Công thức phân tử của maltose là",
+    "options": [
+      "C6H12O6.",
+      "(C6H10O5)n",
+      "C12H22O11.",
+      "C3H6O2."
+    ],
+    "answer": 2,
+    "explanation": "Maltose là disaccharide có công thức C12H22O11, gồm hai đơn vị glucose.",
+    "needReview": false
+  },
+  {
+    "id": "c2-m12",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 12,
+    "prompt": "Đơn vị glucose và đơn vị fructose trong phân tử saccharose liên kết với nhau qua nguyên tử",
+    "options": [
+      "hydrogen.",
+      "nitrogen.",
+      "carbon.",
+      "oxygen."
+    ],
+    "answer": 3,
+    "explanation": "Hai đơn vị monosaccharide trong saccharose nối với nhau bằng liên kết glycoside qua nguyên tử oxygen.",
+    "needReview": false
+  },
+  {
+    "id": "c2-m13",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 13,
+    "prompt": "Chất nào sau đây không tham gia phản ứng thủy phân?",
+    "options": [
+      "Methyl acetate.",
+      "Saccharose.",
+      "Glucose.",
+      "Triolein."
+    ],
+    "answer": 2,
+    "explanation": "Glucose là monosaccharide nên không thể thủy phân thành carbohydrate đơn giản hơn. Ester, chất béo và saccharose đều có thể bị thủy phân.",
+    "needReview": false
+  },
+  {
+    "id": "c2-m14",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 14,
+    "prompt": "Dung dịch chất nào sau đây hòa tan Cu(OH)2 trong môi trường kiềm ở nhiệt độ thường, tạo phức có màu xanh lam?",
+    "options": [
+      "Saccharose.",
+      "Ethyl alcohol.",
+      "Propane-1,3-diol.",
+      "Acetic acid."
+    ],
+    "answer": 0,
+    "explanation": "Saccharose có nhiều nhóm –OH kề nhau nên hòa tan Cu(OH)2 trong môi trường kiềm ở nhiệt độ thường tạo phức màu xanh lam. Ethanol và propane-1,3-diol không có các nhóm –OH kề nhau; acetic acid chỉ phản ứng trung hòa với Cu(OH)2.",
+    "needReview": false,
+    "originalPrompt": "Dung dịch chất nào sau đây hòa tan Cu(OH)2, thu được dung dịch có màu xanh lam?",
+    "editNote": "Bổ sung điều kiện tạo phức trong môi trường kiềm để phân biệt với phản ứng trung hòa của acetic acid; đề gốc có thể được hiểu là A và D đều thỏa mãn."
+  },
+  {
+    "id": "c2-m15",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 15,
+    "prompt": "Đường X là một loại carbohydrate ở thể rắn, không màu, tan trong nước có vị ngọt và ngọt hơn đường nho nhưng không ngọt hơn đường mật ong. Trong phân tử chứa 1 gốc α-glucose và 1 gốc β-fructose. Vậy X là :",
+    "options": [
+      "Glucose.",
+      "Maltose.",
+      "Saccharose.",
+      "Fructose."
+    ],
+    "answer": 2,
+    "explanation": "Saccharose gồm một đơn vị α-glucose và một đơn vị β-fructose; độ ngọt thông thường lớn hơn glucose nhưng nhỏ hơn fructose.",
+    "needReview": false
+  },
+  {
+    "id": "c2-m16",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 16,
+    "prompt": "Saccharose và glucose đều có phản ứng",
+    "options": [
+      "cộng H2 (Ni, to).",
+      "tráng bạc.",
+      "với Cu(OH)2.",
+      "thủy phân."
+    ],
+    "answer": 2,
+    "explanation": "Cả saccharose và glucose đều có nhiều nhóm –OH kề nhau nên hòa tan Cu(OH)2 ở nhiệt độ thường. Saccharose không tráng bạc; glucose không thủy phân.",
+    "needReview": false
+  },
+  {
+    "id": "c2-m17",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 17,
+    "prompt": "Phản ứng nào sau đây không xảy ra?",
+    "options": [
+      "Glucose + AgNO3/NH3.",
+      "Fructose + Cu(OH)2/OH-.",
+      "Saccharose + Br2/H2O.",
+      "Saccharose + H2O (H+, to)."
+    ],
+    "answer": 2,
+    "explanation": "Saccharose không có nhóm –OH hemiacetal tự do, không mở vòng tạo nhóm aldehyde nên không làm mất màu nước bromine.",
+    "needReview": false
+  },
+  {
+    "id": "c2-m18",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 18,
+    "prompt": "Carbohydrate X là một disacchride có nhiều trong cây mía, củ cải đường và hoa thốt nốt. Thủy phân hoàn toàn X trong môi trường acid thu được Y có khả năng làm mất màu nước bromine. Tên gọi của X và Y lần lượt là",
+    "options": [
+      "Maltose, glucose.",
+      "Saccharose, fructose.",
+      "Saccharose, glucose.",
+      "Maltose, fructose."
+    ],
+    "answer": 2,
+    "explanation": "X là saccharose, thủy phân tạo glucose và fructose. Trong hai sản phẩm, glucose làm mất màu nước bromine.",
+    "needReview": false
+  },
+  {
+    "id": "c2-m19",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 19,
+    "prompt": "Tinh bột thuộc loại polysaccharide, có nhiều trong các loại ngũ cốc như hạt lúa, hạt ngô, củ khoai, củ sắn, …. Công thức của tinh bột là",
+    "options": [
+      "(C6H10O5)n.",
+      "C12H22O11.",
+      "C6H12O6.",
+      "C2H4O2."
+    ],
+    "answer": 0,
+    "explanation": "Tinh bột là polysaccharide có công thức (C6H10O5)n.",
+    "needReview": false
+  },
+  {
+    "id": "c2-m20",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 20,
+    "prompt": "Polymer thiên nhiên X được sinh ra trong quá trình quang hợp của cây xanh. Ở nhiệt độ thường, X tạo với dung dịch iodine hợp chất có màu xanh tím. Polymer X là",
+    "options": [
+      "tinh bột.",
+      "cellulose.",
+      "saccharose.",
+      "glicogen."
+    ],
+    "answer": 0,
+    "explanation": "Tinh bột, chủ yếu nhờ cấu trúc xoắn của amylose, tạo phức có màu xanh tím với iodine.",
+    "needReview": false
+  },
+  {
+    "id": "c2-m21",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 21,
+    "prompt": "Cellulose có cấu tạo mạch không phân nhánh, mỗi gốc C6H10O5 có 3 nhóm -OH, nên có thể viết là",
+    "options": [
+      "[C6H5O2(OH)3]n.",
+      "[C6H8O2(OH)3 ]n.",
+      "[C6H7O2(OH)3]n.",
+      "[C6H7O3(OH)3 ]n."
+    ],
+    "answer": 2,
+    "explanation": "[C6H7O2(OH)3]n có tổng mỗi đơn vị là C6H10O5 và thể hiện được ba nhóm –OH.",
+    "needReview": false
+  },
+  {
+    "id": "c2-m22",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 22,
+    "prompt": "Phát biểu nào sau đây đúng?",
+    "options": [
+      "Phân tử cellulose được cấu tạo từ các đơn vị fructose.",
+      "Fructose không có phản ứng tráng bạc.",
+      "Amylopectin có cấu trúc mạch phân nhánh.",
+      "Saccharose không tham gia phản ứng thủy phân."
+    ],
+    "answer": 2,
+    "explanation": "Amylopectin có mạch phân nhánh. Cellulose gồm các đơn vị β-glucose; fructose có phản ứng tráng bạc; saccharose bị thủy phân.",
+    "needReview": false
+  },
+  {
+    "id": "c2-m23",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 23,
+    "prompt": "Phát biểu nào sau đây sai?",
+    "options": [
+      "Thủy phân hoàn toàn cellulose thu được glucose.",
+      "Amylopectin có cấu trúc mạch phân nhánh.",
+      "Fructose và glucose là đồng phân của nhau.",
+      "Fructose là sản phẩm của phản ứng thủy phân tinh bột."
+    ],
+    "answer": 3,
+    "explanation": "Thủy phân hoàn toàn tinh bột chỉ thu được glucose, không thu được fructose.",
+    "needReview": false
+  },
+  {
+    "id": "c2-m24",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 24,
+    "prompt": "Chất X được tạo thành trong cây xanh nhờ quá trình quang hợp, điều kiện thường, X là chất rắn vô định hình. Thủy phân X nhờ xúc tác acid hoặc enzyme, thu được chất Y có ứng dụng làm thuốc tăng lực trong y học. Chất X và Y lần lượt là",
+    "options": [
+      "tinh bột và glucose.",
+      "tinh bột và saccharose.",
+      "cellulose và saccharose.",
+      "saccharose và glucose."
+    ],
+    "answer": 0,
+    "explanation": "Tinh bột là chất rắn vô định hình sinh ra trong cây xanh; thủy phân hoàn toàn tạo glucose, được dùng trong y học.",
+    "needReview": false
+  },
+  {
+    "id": "c2-m25",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 25,
+    "prompt": "Polysaccharide X là chất rắn, màu trắng, dạng sợi. Trong bông nõn có gần 98% chất X. Thủy phân X, thu được monosaccharide Y. Phát biểu nào sau đây đúng?",
+    "options": [
+      "Y có tính chất của alcohol đa chức.",
+      "X có phản ứng tráng bạc.",
+      "Phân tử khối của Y bằng 342.",
+      "X dễ tan trong nước."
+    ],
+    "answer": 0,
+    "explanation": "X là cellulose, Y là glucose. Glucose có nhiều nhóm –OH nên có tính chất alcohol đa chức; M của glucose là 180. Cellulose không tan trong nước và không tráng bạc theo chương trình phổ thông.",
+    "needReview": false
+  },
+  {
+    "id": "c2-m26",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 26,
+    "prompt": "Cho sơ đồ phản ứng: Thuốc súng không khói← X→ Y→ gluconic acid. X , Y lần lượt là",
+    "options": [
+      "cellulose, glucose.",
+      "tinh bột, ethanol",
+      "fructose, ethanol.",
+      "saccharose, ethanol."
+    ],
+    "answer": 0,
+    "explanation": "Cellulose phản ứng với HNO3 đặc/H2SO4 đặc tạo cellulose nitrate dùng làm thuốc súng không khói; thủy phân cellulose tạo glucose; oxi hóa glucose tạo gluconic acid.",
+    "needReview": false
+  },
+  {
+    "id": "c2-m27",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 27,
+    "prompt": "Cho một số tính chất: có dạng sợi (1); tan trong nước (2); tan trong nước Schweizer (3); phản ứng với nitric acid đặc (xúc tác Sulfuric acid đặc) (4); bị oxi hóa bởi thuốc thử Tollens (5); bị thuỷ phân trong dung dịch acid đun nóng (6). Các tính chất của cellulose là:",
+    "options": [
+      "(3), (4), (5) và (6).",
+      "(1), (3), (4) và (6).",
+      "(1), (2), (3) và (4).",
+      "(2), (3), (4) và (5)."
+    ],
+    "answer": 1,
+    "explanation": "Cellulose có dạng sợi, không tan trong nước nhưng tan trong nước Schweizer; có phản ứng nitrate hóa và thủy phân. Cellulose không có phản ứng tráng bạc trong điều kiện học ở phổ thông.",
+    "needReview": false
+  },
+  {
+    "id": "c2-m28",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 28,
+    "prompt": "Thí nghiệm: glucose bị oxi hóa bởi thuốc thử Tollens\nTiến hành thí nghiệm theo các bước sau:\nBước 1: Cho khoảng 2 mL dung dịch AgNO3 1% vào ống nghiệm sạch.\nBước 2: Thêm từ từ từng giọt dung dịch dung dịch ammonia 5%, lắc đều cho đến khi kết tủa tan hết. Dung dịch thu được là thuốc thử Tollens.\nBước 3: Thêm tiếp khoảng 2 mL dung dịch glucose 2% lắc đều. Sau đó, ngâm ống nghiệm vào cốc thuỷ tinh chứa nước nóng trong vài phút.\nPhát biểu nào sau đây sai?",
+    "options": [
+      "Sản phẩm hữu cơ thu được sau bước 3 là ammonium gluconate.",
+      "Thí nghiệm trên chứng minh glucose có tính chất của polyalcohol.",
+      "Sau bước 3, có lớp bạc (silver) kim loại bám trên thành ống nghiệm.",
+      "Trong phản ứng ở bước 3, glucose đóng vai trò là chất khử."
+    ],
+    "answer": 1,
+    "explanation": "Phản ứng Tollens chứng minh tính khử của nhóm aldehyde ở dạng mạch hở của glucose, không chứng minh tính chất polyalcohol. Glucose bị oxi hóa, Ag(I) bị khử thành Ag.",
+    "needReview": false
+  },
+  {
+    "id": "c2-m29",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 29,
+    "prompt": "Cho các phát biểu sau về ứng dụng và trạng thái tự nhiên của glucose và fructose\n(a) Cả glucose và fructose đều là chất rắn, dễ tan trong nước, có vị ngọt.  \n(b) Glucose có nhiều trong quả chín (nhất là nho chín), fructose có nhiều trong mật ong.\n(c) Dung dịch glucose 5% được dùng để truyền tĩnh mạch theo chỉ định y tế.\n(d) Glucose và fructose chủ yếu đóng vai trò cung cấp năng lượng cho tế bào.\nSố phát biểu đúng là:",
+    "options": [
+      "3.",
+      "4.",
+      "1.",
+      "2."
+    ],
+    "answer": 1,
+    "explanation": "Cả bốn phát biểu đều đúng. Glucose và fructose là đường đơn cung cấp năng lượng; dung dịch glucose 5% là một loại dịch truyền được dùng trong y tế.",
+    "needReview": false,
+    "originalPrompt": "Cho các phát biểu sau về ứng dụng và trạng thái tự nhiên của glucose và fructose\n(a) Cả glucose và fructose đều là chất rắn, dễ tan trong nước, có vị ngọt.  \n(b) Glucose có nhiều trong quả chín (nhất là nho chín), fructose có nhiều trong mật ong.\n(c) Dung dịch truyền tĩnh mạch là glucose 5%.\n(d) Glucose và fructose chủ yếu đóng vai trò cung cấp năng lượng cho tế bào.\nSố phát biểu đúng là:",
+    "editNote": "Làm rõ ý (c): glucose 5% là một loại dịch truyền; không phải mọi dung dịch truyền tĩnh mạch đều là glucose 5%."
+  },
+  {
+    "id": "c2-m30",
+    "chapter": 2,
+    "type": "mcq",
+    "number": 30,
+    "prompt": "Cho các phát biểu sau:\n(1) Glucose có khả năng tham gia phản ứng với thuốc thử Tollens.\n(2) Ở điều kiện thường, glucose và saccharose đều là những chất rắn, dễ tan trong nước.\n(3) Saccharose có khả năng tham gia phản ứng với thuốc thử Tollens.\n(4) Saccharose được cấu tạo từ hai gốc β-glucose và α-fructose.\n(5) Trong công nghiệp dược phẩm, saccharose được dùng để pha chế thuốc.\n(6) Có thể phân biệt glucose và fructose bằng thuốc thử Tollens.\nTrong các phát biểu trên, số phát biểu đúng là:",
+    "options": [
+      "2.",
+      "3.",
+      "4.",
+      "5."
+    ],
+    "answer": 1,
+    "explanation": "Các phát biểu đúng là (1), (2), (5). Saccharose không tráng bạc; gồm α-glucose và β-fructose. Cả glucose và fructose đều tráng bạc nên không phân biệt bằng Tollens.",
+    "needReview": false
+  },
+  {
+    "id": "c2-t1",
+    "chapter": 2,
+    "type": "tf",
+    "number": 1,
+    "prompt": "Hằng ngày, cơ thể chúng ta được cung cấp các chất dinh dưỡng như tinh bột, đường saccharose, glucose, fructose, ... Các sản phẩm làm từ giấy, gỗ, sợi cotton, ... với thành phần chính là cellulose cũng được con người sử dụng.",
+    "statements": [
+      {
+        "text": "Các chất tinh bột, đường saccharose, glucose, fructose, cellulose có tên gọi là carbohydrate",
+        "answer": true,
+        "explanation": "Các chất kể trên đều thuộc carbohydrate: đường đơn, đường đôi hoặc polysaccharide."
+      },
+      {
+        "text": "Carbohydrate là những hợp chất hữu cơ đa chức, thường có công thức chung là Cn(H2O)m",
+        "answer": false,
+        "explanation": "Theo định nghĩa trong chương trình phổ thông, carbohydrate là hợp chất hữu cơ tạp chức, thường biểu diễn Cn(H2O)m; không gọi chung là hợp chất đa chức."
+      },
+      {
+        "text": "Carbohydrate được chia làm 3 nhóm chủ yếu monosaccharide, disaccharide, polysaccharide.",
+        "answer": true,
+        "explanation": "Ba nhóm chính là monosaccharide, disaccharide và polysaccharide."
+      },
+      {
+        "text": "Disaccharide gồm glucose và saccharose.",
+        "answer": false,
+        "explanation": "Glucose là monosaccharide; saccharose là disaccharide."
+      }
+    ],
+    "needReview": false
+  },
+  {
+    "id": "c2-t2",
+    "chapter": 2,
+    "type": "tf",
+    "number": 2,
+    "prompt": "Tiến hành thí nghiệm theo các bước sau:\n– Bước 1: Cho 5 giọt dung dịch CuSO4 5% vào ống nghiệm.\n– Bước 2: Thêm 1 ml dung dịch NaOH 10% cào ống nghiệm, lắc đều gạn phần dung dịch, giữ lại kết tủa.\n– Bước 3: Thêm tiếp 2 ml dung dịch  glucose  1% vào ống nghiệm, lắc đều.",
+    "statements": [
+      {
+        "text": "Sau bước 3, kết tủa đã bị hòa tan, thu được dung dịch màu xanh lam.",
+        "answer": true,
+        "explanation": "Glucose có các nhóm –OH kề nhau nên hòa tan Cu(OH)2 tạo phức tan màu xanh lam."
+      },
+      {
+        "text": "Nếu thay dung dịch NaOH ở bước 2 bằng dung dịch KOH thì hiện tượng vẫn tương tự.",
+        "answer": true,
+        "explanation": "KOH cũng cung cấp ion OH− để tạo kết tủa Cu(OH)2 từ CuSO4 nên hiện tượng tương tự."
+      },
+      {
+        "text": "Thí nghiệm trên chứng minh  glucose  có tính chất của aldehyde.",
+        "answer": false,
+        "explanation": "Thí nghiệm ở nhiệt độ thường chứng minh tính chất polyalcohol; muốn chứng minh tính aldehyde bằng Cu(OH)2 cần đun nóng trong môi trường kiềm."
+      },
+      {
+        "text": "Ở bước 3, nếu thay  glucose  bằng fructose thì hiện tượng vẫn xảy ra tương tự.",
+        "answer": true,
+        "explanation": "Fructose cũng có các nhóm –OH kề nhau nên tạo phức màu xanh lam ở nhiệt độ thường."
+      }
+    ],
+    "needReview": false
+  },
+  {
+    "id": "c2-t3",
+    "chapter": 2,
+    "type": "tf",
+    "number": 3,
+    "prompt": "Glucose và fructose thuộc nhóm monosaccharide, chủ yếu đóng vai trò cung cấp năng lượng cho tế bào.",
+    "statements": [
+      {
+        "text": "Glucose và fructose không tham gia phản ứng thuỷ phân.",
+        "answer": true,
+        "explanation": "Monosaccharide không bị thủy phân thành carbohydrate đơn giản hơn."
+      },
+      {
+        "text": "Có thể phân biệt glucose và fructose bằng nước bromine.",
+        "answer": true,
+        "explanation": "Glucose làm mất màu nước bromine, fructose không làm mất màu trong điều kiện thường."
+      },
+      {
+        "text": "Glucose và fructose là đồng phân cấu tạo của nhau.",
+        "answer": true,
+        "explanation": "Cả hai có công thức C6H12O6 nhưng khác cấu tạo nhóm chức: dạng mạch hở của glucose có aldehyde, fructose có ketone."
+      },
+      {
+        "text": "Có thể phân biệt glucose và fructose bằng thuốc thử Tollens.",
+        "answer": false,
+        "explanation": "Cả glucose và fructose đều phản ứng với Tollens; fructose chuyển hóa thành aldose trong môi trường kiềm."
+      }
+    ],
+    "needReview": false
+  },
+  {
+    "id": "c2-t4",
+    "chapter": 2,
+    "type": "tf",
+    "number": 4,
+    "prompt": "Xét các phát biểu về saccharose và maltose.",
+    "statements": [
+      {
+        "text": "Saccharose và maltose đều có công thức phân tử C12H22O11 nên chúng là đồng đẳng của nhau.",
+        "answer": false,
+        "explanation": "Cùng công thức C12H22O11 nhưng khác cấu tạo nên là đồng phân, không phải đồng đẳng."
+      },
+      {
+        "text": "Mỗi phân tử saccharose và maltose đều gồm hai đơn vị monosaccharide.",
+        "answer": true,
+        "explanation": "Saccharose gồm glucose và fructose; maltose gồm hai đơn vị glucose."
+      },
+      {
+        "text": "Saccharose có nhiều trong cây mía, củ cải đường, hoa thốt nốt còn maltose có nhiều trong mạch nha.",
+        "answer": true,
+        "explanation": "Đây là các nguồn tự nhiên điển hình của saccharose và maltose."
+      },
+      {
+        "text": "Saccharose và maltose đều có cấu tạo dạng mạch hở và mạch vòng.",
+        "answer": false,
+        "explanation": "Saccharose chỉ có cấu tạo dạng vòng, không có nhóm –OH hemiacetal tự do nên không mở vòng; maltose có thể tồn tại dạng vòng và mạch hở ở đầu khử."
+      }
+    ],
+    "needReview": false
+  },
+  {
+    "id": "c2-t5",
+    "chapter": 2,
+    "type": "tf",
+    "number": 5,
+    "prompt": "Xét tính chất hóa học của saccharose.",
+    "statements": [
+      {
+        "text": "Saccharose có khả năng hòa tan Cu(OH)2 trong môi trường kiềm ở điều kiện thường tạo dung dịch xanh lam.",
+        "answer": true,
+        "explanation": "Các nhóm –OH kề nhau của saccharose tạo phức tan màu xanh lam với Cu(OH)2."
+      },
+      {
+        "text": "Saccharose bị thủy phân trong môi trường acid, base hoặc xúc tác enzyme.",
+        "answer": false,
+        "explanation": "Saccharose thủy phân nhờ acid hoặc enzyme thích hợp; không bị thủy phân trong môi trường base theo điều kiện học ở phổ thông."
+      },
+      {
+        "text": "Thủy phân hoàn toàn saccharose trong môi trường acid thu được glucose và fructose.",
+        "answer": true,
+        "explanation": "Mỗi phân tử saccharose cộng một phân tử nước tạo một phân tử glucose và một phân tử fructose."
+      },
+      {
+        "text": "Saccharose có khả năng phản ứng với thuốc thử Tollens.",
+        "answer": false,
+        "explanation": "Saccharose không có nhóm –OH hemiacetal tự do và không có tính khử nên không phản ứng với Tollens."
+      }
+    ],
+    "needReview": false
+  },
+  {
+    "id": "c2-t6",
+    "chapter": 2,
+    "type": "tf",
+    "number": 6,
+    "prompt": "Cho các carbohydrate: glucose, fructose, saccharose, maltose.",
+    "statements": [
+      {
+        "text": "Cả 4 chất ở điều kiện thường đều là chất rắn, vị ngọt, tan tốt trong nước.",
+        "answer": true,
+        "explanation": "Đây đều là các đường có phân tử nhỏ, ở thể rắn, vị ngọt và tan tốt trong nước ở điều kiện thường."
+      },
+      {
+        "text": "Có 2 cặp chất là đồng phân của nhau.",
+        "answer": true,
+        "explanation": "Hai cặp là glucose–fructose (C6H12O6) và saccharose–maltose (C12H22O11)."
+      },
+      {
+        "text": "Có 3 chất vừa có cấu tạo dạng mạch hở, vừa có cấu tạo dạng mạch vòng.",
+        "answer": true,
+        "explanation": "Glucose, fructose và maltose có thể có dạng mạch hở và dạng vòng; saccharose chỉ có dạng vòng."
+      },
+      {
+        "text": "Có 4 chất có nhóm -OH hemiacetal.",
+        "answer": false,
+        "explanation": "Saccharose không có –OH hemiacetal tự do. Ở dạng vòng, fructose có –OH hemiketal; do đó không thể nói cả bốn đều có –OH hemiacetal."
+      }
+    ],
+    "needReview": false
+  },
+  {
+    "id": "c2-t7",
+    "chapter": 2,
+    "type": "tf",
+    "number": 7,
+    "prompt": "Cho các carbohydrate: glucose, fructose, saccharose.",
+    "statements": [
+      {
+        "text": "Có 3 chất tham gia phản ứng với thuốc thử Tollens.",
+        "answer": false,
+        "explanation": "Chỉ glucose và fructose phản ứng với Tollens; saccharose không có tính khử."
+      },
+      {
+        "text": "Có 2 chất làm mất màu nước bromine.",
+        "answer": false,
+        "explanation": "Chỉ glucose làm mất màu nước bromine ở điều kiện thường; fructose và saccharose không phản ứng."
+      },
+      {
+        "text": "Có 1 chất tham gia phản ứng thủy phân.",
+        "answer": true,
+        "explanation": "Chỉ saccharose bị thủy phân; glucose và fructose là monosaccharide."
+      },
+      {
+        "text": "Có 3 chất hòa tan được Cu(OH)2 trong môi trường kiềm ở điều kiện thường tạo dung dịch xanh lam.",
+        "answer": true,
+        "explanation": "Cả ba đều có nhiều nhóm –OH kề nhau nên hòa tan Cu(OH)2 tạo phức màu xanh lam ở nhiệt độ thường."
+      }
+    ],
+    "needReview": false
+  },
+  {
+    "id": "c2-t8",
+    "chapter": 2,
+    "type": "tf",
+    "number": 8,
+    "prompt": "Xét đặc điểm cấu tạo của tinh bột.",
+    "statements": [
+      {
+        "text": "Tinh bột có hai loại là amylose và amylopectin.",
+        "answer": true,
+        "explanation": "Tinh bột gồm hai thành phần polysaccharide chính là amylose và amylopectin."
+      },
+      {
+        "text": "Amylose có mạch không nhánh, xoắn lại, gồm nhiều đơn vị α – glucose liên kết với nhau bằng liên kết α – 1,2 – glycoside.",
+        "answer": false,
+        "explanation": "Các đơn vị α-glucose trong amylose nối bằng liên kết α-1,4-glycoside, không phải α-1,2."
+      },
+      {
+        "text": "Amylopectin có mạch phân nhánh, gồm nhiều đơn vị α – glucose liên kết với nhau bằng liên kết α – 1,4 – glycoside và α – 1,6 – glycoside.",
+        "answer": true,
+        "explanation": "Amylopectin có liên kết α-1,4 ở mạch chính và α-1,6 tại chỗ phân nhánh."
+      },
+      {
+        "text": "Các đơn vị α – glucose trong tinh bột liên kết với nhau qua nguyên tử carbon.",
+        "answer": false,
+        "explanation": "Liên kết glycoside giữa các đơn vị glucose đi qua nguyên tử oxygen."
+      }
+    ],
+    "needReview": false
+  },
+  {
+    "id": "c2-t9",
+    "chapter": 2,
+    "type": "tf",
+    "number": 9,
+    "prompt": "Tinh bột và cellulose đều thuộc loại polysaccharide.",
+    "statements": [
+      {
+        "text": "Tinh bột và cellulose đều có công thức (C6H10O5)n nên là đồng phân của nhau.",
+        "answer": false,
+        "explanation": "Cùng dạng công thức (C6H10O5)n chưa đủ để kết luận hai polymer là đồng phân: số đơn vị n và phân tử khối không được xác định là bằng nhau. Theo quy ước phổ thông, không coi tinh bột và cellulose là đồng phân."
+      },
+      {
+        "text": "Tinh bột gồm nhiều đơn vị α – glucose còn cellulose gồm nhiều đơn vị β – glucose.",
+        "answer": true,
+        "explanation": "Tinh bột gồm các đơn vị α-glucose; cellulose gồm các đơn vị β-glucose."
+      },
+      {
+        "text": "Amylopectin có mạch phân nhánh còn cellulose có mạch không phân nhánh.",
+        "answer": true,
+        "explanation": "Amylopectin phân nhánh nhờ liên kết α-1,6; cellulose là mạch không phân nhánh với liên kết β-1,4."
+      },
+      {
+        "text": "Amylose và cellulose đều có mạch không phân nhánh, xoắn lại.",
+        "answer": false,
+        "explanation": "Amylose có cấu trúc xoắn; cellulose có chuỗi không phân nhánh, dạng kéo dài, tạo bó sợi, không xoắn như amylose."
+      }
+    ],
+    "needReview": true,
+    "reviewNote": "Ý a phụ thuộc cách dùng thuật ngữ đồng phân đối với polymer. Đáp án mẫu theo quy ước Hóa học phổ thông: sai, vì không xác định cùng số đơn vị lặp n."
+  },
+  {
+    "id": "c2-t10",
+    "chapter": 2,
+    "type": "tf",
+    "number": 10,
+    "prompt": "Xét tính chất hóa học của tinh bột.",
+    "statements": [
+      {
+        "text": "Tinh bột bị thủy phân trong môi trường acid hoặc xúc tác enzyme.",
+        "answer": true,
+        "explanation": "Liên kết glycoside của tinh bột bị cắt bởi acid hoặc enzyme thích hợp."
+      },
+      {
+        "text": "Sản phẩm phản ứng thủy phân hoàn toàn tinh bột trong môi trường acid có tham gia phản ứng tráng bạc.",
+        "answer": true,
+        "explanation": "Thủy phân hoàn toàn tinh bột tạo glucose; glucose có phản ứng tráng bạc."
+      },
+      {
+        "text": "Trong quá trình tiêu hóa, tinh bột bị thủy phân không hoàn toàn bởi các enzyme tạo thành dextrin, saccharose và glucose.",
+        "answer": false,
+        "explanation": "Các sản phẩm trung gian thường gồm dextrin và maltose, sau đó glucose; không tạo saccharose."
+      },
+      {
+        "text": "Tinh bột có khả năng hấp phụ iodine tạo thành hợp chất có màu xanh tím.",
+        "answer": true,
+        "explanation": "Iodine nằm trong cấu trúc xoắn amylose tạo phức màu xanh tím; đun nóng có thể làm mất màu, để nguội màu xuất hiện lại."
+      }
+    ],
+    "needReview": false
+  },
+  {
+    "id": "c2-t11",
+    "chapter": 2,
+    "type": "tf",
+    "number": 11,
+    "prompt": "Thủy phân hoàn toàn disaccharide E có nhiều trong cây mía, thu được hai monosaccharide X và Y là đồng phân của nhau; X là glucose. Thực hiện phản ứng tráng gương đối với X, thu được chất hữu cơ Z trong dung dịch.",
+    "statements": [
+      {
+        "text": "Phần trăm khối lương oxygen trong Y là 53,33%.",
+        "answer": true,
+        "explanation": "Y là fructose, C6H12O6. Phần trăm khối lượng oxygen bằng 6×16/180×100% = 53,33%."
+      },
+      {
+        "text": "E là saccharose.",
+        "answer": true,
+        "explanation": "Saccharose thủy phân tạo hai monosaccharide glucose và fructose là đồng phân của nhau."
+      },
+      {
+        "text": "X và Y đều có trong mật ong.",
+        "answer": true,
+        "explanation": "Cả glucose và fructose đều là thành phần đường có trong mật ong."
+      },
+      {
+        "text": "Phân tử khối của Z bằng 196.",
+        "answer": false,
+        "explanation": "Trong môi trường Tollens, sản phẩm từ glucose là ammonium gluconate C6H15NO7, M = 213. Gluconic acid C6H12O7 có M = 196 nhưng không phải muối Z đã nêu."
+      }
+    ],
+    "needReview": false,
+    "originalPrompt": "Thủy phân hoàn toàn carbohydrate E, thu được hai monosaccharide X và Y là đồng phân của nhau. Thực hiện phản ứng tráng gương đối với X và Y, thu được chất hữu cơ Z.",
+    "editNote": "Bổ sung nguồn cây mía để xác định E là saccharose (tránh nhầm lactose cũng tạo hai monosaccharide là đồng phân); làm rõ X là glucose và chỉ xét sản phẩm của X trong môi trường Tollens. Đề gốc giả định glucose và fructose tạo duy nhất cùng một sản phẩm là chưa chặt; fructose có thể chuyển hóa thành các aldose. Z là ammonium gluconate, không phải gluconic acid."
+  },
+  {
+    "id": "c3-m1",
+    "chapter": 3,
+    "type": "mcq",
+    "number": 1,
+    "prompt": "Chất nào sau đây là amine bậc II?",
+    "options": [
+      "C6H5NH2",
+      "(CH3)2NH",
+      "(CH3)3N",
+      "CH3NH2"
+    ],
+    "answer": 1,
+    "explanation": "Bậc của amine là số gốc hydrocarbon liên kết trực tiếp với N. Trong (CH3)2NH, N liên kết với hai gốc methyl nên đây là amine bậc II.",
+    "needReview": false
+  },
+  {
+    "id": "c3-m2",
+    "chapter": 3,
+    "type": "mcq",
+    "number": 2,
+    "prompt": "Công thức chung của amine no đơn chức mạch hở là",
+    "options": [
+      "CnH2n+3N",
+      "CnH2n+1N",
+      "CnH2n−1NH2",
+      "CnH2n+2NH2"
+    ],
+    "answer": 0,
+    "explanation": "Amine no, đơn chức, mạch hở có công thức phân tử chung CnH2n+3N với n ≥ 1, áp dụng cho cả amine bậc I, II và III.",
+    "needReview": false
+  },
+  {
+    "id": "c3-m3",
+    "chapter": 3,
+    "type": "mcq",
+    "number": 3,
+    "prompt": "Propan-2-amine là chất nào sau đây?",
+    "options": [
+      "CH3CH2NH2",
+      "CH3CH2CH(NH2)CH3",
+      "CH3CH2CH2NH2",
+      "(CH3)2CHNH2"
+    ],
+    "answer": 3,
+    "explanation": "Propan-2-amine có mạch propane gồm ba carbon và nhóm −NH2 ở carbon số 2: CH3CH(NH2)CH3 = (CH3)2CHNH2.",
+    "needReview": false
+  },
+  {
+    "id": "c3-m4",
+    "chapter": 3,
+    "type": "mcq",
+    "number": 4,
+    "prompt": "Nicotine làm tăng huyết áp và nhịp tim, có khả năng gây sơ vữa động mạnh vành và suy giảm trí nhớ. Trong cây thuốc lá và khói thuốc lá chứa một amine rất độc, đó là nicotine với công thức cấu tạo như sau:\n\nCông thức phân tử nicotine là",
+    "options": [
+      "C10H14N2",
+      "C10H12N2",
+      "C11H12N2",
+      "C11H16N2"
+    ],
+    "answer": 0,
+    "explanation": "Đếm các nguyên tử trong công thức cấu tạo nicotine được 10 nguyên tử C, 14 nguyên tử H và 2 nguyên tử N, nên công thức phân tử là C10H14N2.",
+    "needReview": false
+  },
+  {
+    "id": "c3-m5",
+    "chapter": 3,
+    "type": "mcq",
+    "number": 5,
+    "prompt": "Ở điều kiện thường, chất nào sau đây là chất lỏng?",
+    "options": [
+      "C6H5NH2",
+      "(CH3)2NH",
+      "(CH3)3N",
+      "CH3NH2"
+    ],
+    "answer": 0,
+    "explanation": "Aniline (C6H5NH2) là chất lỏng ở điều kiện thường. Methylamine, dimethylamine và trimethylamine là các chất khí ở điều kiện thường.",
+    "needReview": false
+  },
+  {
+    "id": "c3-m6",
+    "chapter": 3,
+    "type": "mcq",
+    "number": 6,
+    "prompt": "Dung dịch chất nào sau đây làm quỳ tím hóa xanh?",
+    "options": [
+      "C6H5NH2",
+      "CH3COOH",
+      "CH3COOCH3",
+      "CH3NH2"
+    ],
+    "answer": 3,
+    "explanation": "CH3NH2 là base: CH3NH2 + H2O ⇌ CH3NH3+ + OH−, nên làm quỳ tím hóa xanh. Aniline có tính base rất yếu, không làm đổi màu quỳ tím trong điều kiện thí nghiệm thông thường.",
+    "needReview": false
+  },
+  {
+    "id": "c3-m7",
+    "chapter": 3,
+    "type": "mcq",
+    "number": 7,
+    "prompt": "CH3-NH-CH3 có tên thay thế là",
+    "options": [
+      "dimethylamine",
+      "ethan-2-amine",
+      "ethylamine",
+      "N-methylmethanamine"
+    ],
+    "answer": 3,
+    "explanation": "Chọn methanamine làm chất nền, một H gắn với N được thay bằng nhóm methyl nên tên thay thế là N-methylmethanamine. Dimethylamine là tên gốc–chức.",
+    "needReview": false
+  },
+  {
+    "id": "c3-m8",
+    "chapter": 3,
+    "type": "mcq",
+    "number": 8,
+    "prompt": "Số đồng phân cấu tạo amine có cùng công thức phân tử C3H9N là",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": 3,
+    "explanation": "Có bốn đồng phân: CH3CH2CH2NH2; (CH3)2CHNH2; CH3NHCH2CH3; (CH3)3N. Chúng gồm hai amine bậc I, một amine bậc II và một amine bậc III.",
+    "needReview": false
+  },
+  {
+    "id": "c3-m9",
+    "chapter": 3,
+    "type": "mcq",
+    "number": 9,
+    "prompt": "Cho khoảng 1 mL dung dịch FeCl3 0,1 M vào ống nghiệm, thêm tiếp khoảng 3 mL dung dịch methylamine 0,1 M vào ống nghiệm. Hiện tượng quan sát được là",
+    "options": [
+      "dung dịch có màu nâu đỏ",
+      "sủi bọt khí",
+      "xuất hiện kết tủa màu nâu đỏ",
+      "không có hiện tượng"
+    ],
+    "answer": 2,
+    "explanation": "Methylamine có tính base, tạo OH− trong nước và làm kết tủa Fe(OH)3 màu nâu đỏ: Fe3+ + 3CH3NH2 + 3H2O → Fe(OH)3↓ + 3CH3NH3+.",
+    "needReview": false
+  },
+  {
+    "id": "c3-m10",
+    "chapter": 3,
+    "type": "mcq",
+    "number": 10,
+    "prompt": "Dãy các chất đều tác dụng với dung dịch methylamine là",
+    "options": [
+      "Cu(OH)2, dung dịch NaOH, dung dịch HCl, dung dịch FeCl3",
+      "dung dịch Br2, dung dịch HCl, dung dịch FeCl3, dung dịch HNO2",
+      "Cu(OH)2, dung dịch HCl, dung dịch FeCl3, dung dịch HNO2",
+      "dung dịch NH3, dung dịch NaCl, dung dịch CuSO4, dung dịch HNO3"
+    ],
+    "answer": 2,
+    "explanation": "Methylamine tạo phức với Cu(OH)2 khi dùng dư, tạo muối với HCl, làm kết tủa Fe(OH)3 từ FeCl3 và phản ứng với HNO2 tạo CH3OH, N2, H2O. Nó không phản ứng với NaOH hay NaCl theo các phản ứng đặc trưng trong chương trình phổ thông.",
+    "needReview": false
+  },
+  {
+    "id": "c3-t1",
+    "chapter": 3,
+    "type": "tf",
+    "number": 1,
+    "prompt": "Cho các amine sau: (1) methylamine, (2) trimethylamine, (3) ethylamine, (4) benzenamine.",
+    "statements": [
+      {
+        "text": "Có một amine là chất lỏng, 2 amine là chất khí và một amine là chất rắn.",
+        "answer": false,
+        "explanation": "Methylamine, trimethylamine và ethylamine là ba chất khí ở điều kiện thường; benzenamine (aniline) là chất lỏng. Không có chất rắn trong bốn chất này."
+      },
+      {
+        "text": "Có 3 amine được gọi theo tên gốc chức là (1), (2), (3) và một amine được gọi theo tên thay thế là (4).",
+        "answer": true,
+        "explanation": "Methylamine, trimethylamine, ethylamine là các tên gốc–chức; benzenamine là tên thay thế của aniline."
+      },
+      {
+        "text": "Có một amine là amine bậc III, 1 amine bậc II và 2 amine bậc I.",
+        "answer": false,
+        "explanation": "Trimethylamine là amine bậc III; methylamine, ethylamine và benzenamine đều là amine bậc I. Không có amine bậc II."
+      },
+      {
+        "text": "Có 3 amine làm quỳ tím ẩm hóa xanh là (1), (2), (3) và (4) không làm đổi màu giấy quỳ.",
+        "answer": true,
+        "explanation": "Ba alkylamine (1), (2), (3) có tính base đủ để làm quỳ tím ẩm hóa xanh; benzenamine có tính base rất yếu nên không làm đổi màu quỳ trong điều kiện thông thường."
+      }
+    ],
+    "needReview": false
+  },
+  {
+    "id": "c3-t2",
+    "chapter": 3,
+    "type": "tf",
+    "number": 2,
+    "prompt": "Amine có thể có các đồng phân: bậc amine, mạch carbon và vị trí nhóm amine.",
+    "statements": [
+      {
+        "text": "Bắt đầu từ C3H9N mới có đồng phân amine bậc III.",
+        "answer": true,
+        "explanation": "Amine bậc III cần ba gốc hydrocarbon gắn với N. Tổng số carbon nhỏ nhất là 3, ứng với trimethylamine (CH3)3N."
+      },
+      {
+        "text": "C4H11N có 2 đồng phân amine bậc III.",
+        "answer": false,
+        "explanation": "Chia bốn carbon thành ba gốc alkyl chỉ có cách 2 + 1 + 1. Vì vậy chỉ có một amine bậc III là C2H5N(CH3)2."
+      },
+      {
+        "text": "C7H9N có 4 đồng phân arylamine (nguyên tử N liên kết trực tiếp với vòng benzene).",
+        "answer": true,
+        "explanation": "Có o-, m-, p-CH3C6H4NH2 và C6H5NHCH3. Benzylamine C6H5CH2NH2 không phải arylamine vì N không gắn trực tiếp với vòng benzene."
+      },
+      {
+        "text": "C2H7N có một đồng phân amine bậc I và một đồng phân amine bậc II.",
+        "answer": true,
+        "explanation": "Hai đồng phân là CH3CH2NH2 (bậc I) và CH3NHCH3 (bậc II)."
+      }
+    ],
+    "originalPrompt": "Amine có thể có các đồng phân: bậc amine, mạch carbon và vị trí nhóm amine.\na. Bắt đầu từ C3H9N mới có đồng phân amine bậc III.\nb. C4H11N có 2 đồng phân amine bậc III.\nc. C7H9N có 4 đồng phân amine thơm.\nd. C2H7N có một đồng phân amine bậc I và một đồng phân amine bậc II.",
+    "editNote": "Làm rõ thuật ngữ ở ý c: thay ‘amine thơm’ bằng ‘arylamine (N liên kết trực tiếp với vòng benzene)’ để tránh cách đếm gồm cả benzylamine. Theo phạm vi này có đúng bốn đồng phân.",
+    "needReview": false
+  },
+  {
+    "id": "c3-t3",
+    "chapter": 3,
+    "type": "tf",
+    "number": 3,
+    "prompt": "Thực hiện thí nghiệm phản ứng tạo phức của methylamine\n- Cho 1 mL dung dịch CuSO4 1 M vào ống nghiệm.\n- Nhỏ từ từ cho đến dư từng giọt dung dịch CH3NH2 vào, lắc nhẹ đều ống nghiệm.",
+    "statements": [
+      {
+        "text": "Lúc đầu xuất hiện kết tủa màu xanh của Cu(OH)2.",
+        "answer": true,
+        "explanation": "Ban đầu, methylamine thể hiện tính base làm xuất hiện OH−; Cu2+ + 2OH− → Cu(OH)2↓ màu xanh."
+      },
+      {
+        "text": "Sau khi phản ứng kết thúc xuất hiện kết tủa màu xanh lam.",
+        "answer": false,
+        "explanation": "Khi methylamine dư, kết tủa Cu(OH)2 tan do tạo phức tan với Cu2+. Sản phẩm quan sát cuối cùng là dung dịch màu xanh lam."
+      },
+      {
+        "text": "Sau khi phản ứng kết thúc xuất hiện dung dịch màu xanh lam do amine tạo phức với ion Cu2+.",
+        "answer": true,
+        "explanation": "Methylamine dư phối trí với Cu2+ tạo phức tan, thường biểu diễn [Cu(CH3NH2)4(H2O)2]2+, làm kết tủa ban đầu tan và tạo dung dịch màu xanh lam."
+      },
+      {
+        "text": "Có thể thay methylamine bằng những amine khác thì đều có hiện tượng giống nhau.",
+        "answer": false,
+        "explanation": "Không phải mọi amine đều tạo phức tan tương tự. Khả năng tạo phức, tính base và độ tan phụ thuộc cấu tạo amine; không thể khẳng định cho mọi amine, chẳng hạn aniline."
+      }
+    ],
+    "needReview": false
+  },
+  {
+    "id": "c3-t4",
+    "chapter": 3,
+    "type": "tf",
+    "number": 4,
+    "prompt": "Amine là dẫn xuất của ammonia, trong đó nguyên tử hydrogen trong phân tử NH3 được thay thế bằng gốc hydrocarbon.",
+    "statements": [
+      {
+        "text": "Amine bậc 1 chứa 1 gốc hydrocarbon liên kết trực tiếp với nguyên tử nitrogen.",
+        "answer": true,
+        "explanation": "Amine bậc I có dạng RNH2: N liên kết trực tiếp với một gốc hydrocarbon."
+      },
+      {
+        "text": "Khi thay một, hai hoặc ba nguyên tử hydrogen của NH3 bằng các gốc alkyl, mọi amine thu được đều có cấu tạo dạng R–NH2.",
+        "answer": false,
+        "explanation": "Sai. Amine bậc I có dạng R–NH2, bậc II có dạng R–NH–R′ và bậc III có dạng R–N(R′)–R″. Công thức phân tử chung của amine no, đơn chức, mạch hở là CnH2n+3N."
+      },
+      {
+        "text": "C6H5NH2 và C6H5CH2NH2 đều là arylamine.",
+        "answer": false,
+        "explanation": "Chỉ C6H5NH2 là arylamine. Trong C6H5CH2NH2 (benzylamine), N gắn với carbon của nhóm CH2, không gắn trực tiếp với vòng benzene."
+      },
+      {
+        "text": "Arylamine là amine có nguyên tử nitrogen liên kết trực tiếp với nguyên tử carbon của vòng benzene.",
+        "answer": true,
+        "explanation": "Trong phạm vi các amine chứa vòng benzene của chương trình Hóa học 12, arylamine có N liên kết trực tiếp với carbon thuộc vòng benzene; ví dụ aniline C6H5NH2."
+      }
+    ],
+    "needReview": false,
+    "originalStatements": [
+      "Amine bậc 1 chứa 1 gốc hydrocarbon liên kết trực tiếp với nguyên tử nitrogen.",
+      "Nếu nguyên tử hydrogen trong phân tử NH3 được thay thế bằng gốc alkyl, ta thu được amine no đơn chức mạch hở và có công thức chung là CnH2n+1NH2 (n ≥ 1).",
+      "C6H5NH2 và C6H5CH2NH2 đều là arylamine.",
+      "Arylamine là amine có nguyên tử nitrogen liên kết trực tiếp với nguyên tử carbon của vòng benzene."
+    ],
+    "editNote": "Làm rõ ý b để phân biệt cấu tạo amine bậc I với các bậc II, III. Biểu thức CnH2n+1NH2 trong bản gốc có cùng thành phần nguyên tố với CnH2n+3N, nên cách chấm phụ thuộc cách hiểu công thức."
+  }
+];
+
+/* Hình cấu tạo lấy từ tài liệu gốc, nhúng trực tiếp để chạy ngoại tuyến. */
+const FIGURES = {"c1-t6": {"src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQsAAADFCAMAAAB0HicQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMAUExURf///wAAAAgIACEhGff379bW3s7OzjExMWtra6Va70JapXNalHNa7xBapXOlY6VaxUJae3NaxRBae4xaSkJazhBazq2UzqVanFpaKa1aGVopGVpaCFoIGebe3ubv76XvWkrv3kLvWkqt3kKtWkqtnKXvGUKtGaUZnKWUMUrvnK0ZSkLvGUIZ73PvWhCtWnPvGRCtGXMZnHOUMRAZ73vvnBDvWhDvGXvv3nuU7973vUrO3kLOWkrOnELOGRDOWhDOGaWMlHN7cxAxShkQGYSEhK1aSilaSkJa76WlY1opSilaEBBa7whaSqWEY1oISghaEEJCQggIEK3v3q2U7+8ZELW9tc4ZEKWlnK2trYScjO9aEO/OEO+UEBmM7xmMrYwpGc5aEM7OEM6UEBmMzhmMjIwIGZRae4xKGUpaUmNjWsXFvVpSUu8ZMe9rpe8pY+8ppc5rpc4pY84ppc4ZMe9Kpe8IY+8Ipc5Kpc4IY84Ipd73jO/OtaUp70IppXulpXMp7xAppd73OqUpxUIpe3MpxRApe6XOa0qM70KMa0qMraXOKUKMKaUpe6WlEIwpSkIpznPOaxCMa3POKRCMKXMpe3OlEBApznvOrXvO73ulzt73Y973EK3FlO/OlKUI70IIpXMI7xAIpaUIxUIIe3MIxRAIe6XOSkqMzkKMSkqMjKXOCEKMCKUIe6WEEIwISkIIznPOShCMSnPOCBCMCHMIe3OEEBAIznvOjHvOznuEzu/Oc+9r5u9acykISu9aMe/OMe8p5u+t5u+UMe+Ucxmt7xmtra0pGe+ctRnv7xnvrc7Oc85r5s5ac84p5s6t5s6Uc86ctRnO7xnOre/OUu9K5u9aUggISs5aMc7OMe8I5u+M5s6UMe+UUhmtzhmtjK0IGe+clBnvzhnvjM7OUs5K5s5aUs4I5s6M5s6UUs6clBnOzhnOjLVae4xrGa3vra3O763vjK3OzggpEHuEpXOEWs7OnDExUq2MrXNSc+/W9yEIAN73/wAQAP/v/wAACAAAANJ/SGYAAAEAdFJOU////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wBT9wclAAAACXBIWXMAACHVAAAh1QEEnLSdAAAPy0lEQVR4Xu1dYXKjOgyOSwJcwj7LMnAA8oOB3KBbTt/tTN/uTMk8fbYBmxhC0qTBLd97M3VskkWyLMlGEpsVK1asWLFixYoVK1Z4ACE4F0J/sEEj/NzIYHx0YPloirgOGIvyJNQ9HXhWR4zt87gcUiWqOmeM5XXJN0WuOwFetgNiU9WbTZhk7X8FxvuPibx+UQjp1ivOd0XM0toiWSR7loWchyVjKdedClVwTNVQmgZHgxc0EKiBIw38hpAU4A3LQyUrfPcLH1m1s39xCagYSzQHipTlxg3ynAVaUkTMWKmawDZjx6C9MqNvtSxsEpKvbuDIFG8FaDd+mC5ilW4vCdkTixvd3oR/2Ht3z2HAOno3Imdpx4yGOGNI0KHjBVhGy0KDOKYFBrxQLQkSM5M1S0Fh3xaJb0cXKQpDFDhdKNc7gUSpFRiJuBUFIjLYqaZEnP+Tf9NTXpyopocDFBoEQxbYL9WkKX7v515+DtTnHX2JFEEPrldWSAOWQgz1APWbvHijj8uTC6xc665Ize1lB6e5tAgmQo+ZbNUnpGRqlqEj7YGD+uiQC1N8FgGsg359A7hNObXgkiXHuFYuf1IqrR5oUUlNGO5PBjST6Lf2sqGwSH0BbWFbecg/lsJQ9ZMm/Es9IA0m8U312QD7zAXXw5aLZpH6IqObUnLfAgoErgSW/t5UF5vNb+oCqaQ42IvqsiCwdtwk0oC5Rg70cXFyAbLsmdxSz57sBZkK9qT7NDDtMf2FVnDxwqEuWvhgR+iehlKNLhIVzHGquzTAC6JIgDAXydC2rHNVLOCbWY9xpj0QuEc3LyAx5lQSNC/kFU5eYMBeVi3ApQEWZ0dwU+O8GJEL/HHxAmp3wL4WNPChm0BnR3gSsbj14B4M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", "alt": "Cấu tạo aspirin: vòng benzene có nhóm COOH và nhóm OCOCH3 ở hai vị trí kề nhau.", "width": 267, "height": 197}, "c3-m4": {"src": "data:image/png;base64,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", "alt": "Cấu tạo nicotine: vòng pyridine nối với vòng N-methylpyrrolidine.", "width": 114, "height": 79}};
+const CHAPTERS = {
+  1: {name:'Ester – Lipid', description:'Xà phòng và chất giặt rửa tổng hợp'},
+  2: {name:'Carbohydrate', description:'Glucose, fructose, saccharose, tinh bột và cellulose'},
+  3: {name:'Hợp chất chứa nitrogen', description:'Cấu tạo, đồng phân và tính chất của amine'}
+};
+const LETTERS = ['A','B','C','D'];
+const HISTORY_KEY = 'hoa12-history-v1';
+const DURATION = 45 * 60;
+let state = {screen:'home',filter:'mixed',chapter:'all',session:null};
+let timerId = null, toastId = null, lastFocus = null, drawerFocus = null, historyMemory = [], storageWarning = false;
+const $ = selector => document.querySelector(selector);
+const escapeHTML = value => String(value == null ? '' : value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const icon = (name, size=18) => {
+  const paths = {
+    book:'<path d="M4 4h6a3 3 0 0 1 3 3v14a4 4 0 0 0-4-3H4z"/><path d="M20 4h-4a3 3 0 0 0-3 3v14a4 4 0 0 1 4-3h3z"/>',
+    clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+    arrow:'<path d="M5 12h14m-5-5 5 5-5 5"/>',
+    flag:'<path d="M5 21V4m0 0c5-4 9 4 14 0v10c-5 4-9-4-14 0"/>',
+    grid:'<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>',
+    check:'<path d="m5 12 4 4L19 6"/>',
+    close:'<path d="m6 6 12 12M6 18 18 6"/>',
+    flask:'<path d="M9 3h6m-5 0v6L4 19a1 1 0 0 0 1 2h14a1 1 0 0 0 1-2L14 9V3M7 15h10"/><path d="M10 18h.01M14 17h.01"/>',
+    history:'<path d="M3 11a9 9 0 1 1 2 7M3 4v7h7m2-4v5l3 2"/>',
+    shield:'<path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6z"/><path d="m8 12 3 3 5-6"/>',
+    home:'<path d="m3 10 9-7 9 7M5 9v12h14V9M9 21v-7h6v7"/>'
+  };
+  return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name] || paths.book}</svg>`;
+};
+function toast(message) {
+  clearTimeout(toastId); $('#toast').textContent = message; $('#toast').classList.remove('hidden');
+  toastId = setTimeout(() => $('#toast').classList.add('hidden'), 4500);
+}
+function formatTime(seconds) {
+  seconds = Math.max(0, Math.floor(seconds));
+  return [Math.floor(seconds / 3600), Math.floor(seconds / 60) % 60, seconds % 60].map(n => String(n).padStart(2,'0')).join(':');
+}
+function formatDate(date) { return new Date(date).toLocaleString('vi-VN', {hour:'2-digit',minute:'2-digit',day:'2-digit',month:'2-digit',year:'numeric'}); }
+function getHistory() {
+  try {
+    const data = JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
+    if (!Array.isArray(data)) return historyMemory;
+    historyMemory = data.filter(x => x && typeof x.title === 'string' && Number.isFinite(x.score) && Number.isFinite(x.elapsed) && Number.isFinite(x.date)).slice(0,100);
+  } catch (e) { storageWarning = true; }
+  return historyMemory;
+}
+function saveHistory(record) {
+  historyMemory = [record, ...getHistory()].slice(0,100);
+  try { localStorage.setItem(HISTORY_KEY, JSON.stringify(historyMemory)); }
+  catch (e) { storageWarning = true; toast('Trình duyệt không cho lưu lịch sử. Kết quả hiện tại vẫn xem được.'); }
+}
+function renderHeader() {
+  $('#header').className = 'site-header';
+  $('#header').innerHTML = `<div class="wrap brand-row"><button class="brand" data-action="home" aria-label="Trang chủ Hóa học 12"><span class="logo">${icon('flask',27)}</span><span><strong>Hóa học 12</strong><small>TRẠM ÔN TẬP</small></span></button><div class="header-note">${icon('shield',16)}<span>Giữa học kỳ I<span class="desktop-only"> · Sẵn sàng bứt phá</span></span></div></div>`;
+}
+function historyHTML() {
+  const history = getHistory();
+  if (!history.length) return `<div class="empty">${icon('history',30)}Chưa có bài làm nào. Bắt đầu một đề để ghi lại tiến bộ của bạn.</div>`;
+  return `<table class="history-table"><thead><tr><th>Đề ôn tập</th><th>Chế độ</th><th>Điểm / 10</th><th>Thời gian</th><th>Ngày làm</th></tr></thead><tbody>${history.map(h => `<tr><td>${escapeHTML(h.title)}</td><td>${h.mode === 'practice' ? 'Luyện tập' : 'Thi thử'}</td><td class="score-small">${h.score.toFixed(2)}</td><td>${formatTime(h.elapsed)}</td><td>${formatDate(h.date)}</td></tr>`).join('')}</tbody></table>`;
+}
+function examSpec(chapter, filter) {
+  const chapterNumber = chapter === 'all' ? null : Number(chapter);
+  const list = QUESTIONS.filter(q => (!chapterNumber || q.chapter === chapterNumber) && (filter === 'mixed' || q.type === filter));
+  const title = chapterNumber ? `Chương ${chapterNumber}: ${CHAPTERS[chapterNumber].name}` : 'Tổng ôn giữa học kỳ I';
+  return {chapter:String(chapter),filter,title,list};
+}
+function renderHome() {
+  state.screen = 'home'; clearInterval(timerId); renderHeader(); $('#footer').classList.remove('hidden');
+  const chapters = state.chapter === 'all' ? ['all','1','2','3'] : [state.chapter];
+  const filterName = state.filter === 'mcq' ? 'Trắc nghiệm A/B/C/D' : state.filter === 'tf' ? 'Trắc nghiệm đúng–sai' : 'Đề tổng hợp';
+  $('#main').innerHTML = `<div class="wrap">
+    <section class="hero"><div><div class="eyebrow">HÓA HỌC 12 / GIỮA HỌC KỲ I</div><h1>Vững kiến thức.<br><span>Tự tin vào phòng thi.</span></h1><p>Ôn theo từng chương, hiểu rõ từng đáp án.<br>Chọn đề phù hợp và bắt đầu hành trình chinh phục điểm 10.</p><div class="hero-chips"><span class="pill">${icon('book',14)} 3 chương trọng tâm</span><span class="pill">${icon('check',14)} Giải thích từng câu</span><span class="pill">${icon('grid',14)} Tùy chọn đảo đề</span></div></div><div class="overview"><div class="ring"><div class="ring-inner"><strong>95</strong><small>CÂU ÔN TẬP</small></div></div><div><h2>Trọn bộ đề cương của bạn</h2><p><i class="dot"></i>70 câu chọn A / B / C / D</p><p><i class="dot light"></i>25 câu đúng–sai · 100 ý</p><p style="margin-top:10px">${icon('clock',14)}45 phút cho mỗi đề</p></div></div></section>
+    <section aria-labelledby="exam-list-title"><div class="section-heading"><div><h2 id="exam-list-title">Danh sách đề ôn tập</h2><p>Luyện tập để hiểu bài · Thi thử để kiểm tra năng lực</p></div><span class="pill green">${icon('check',14)} Miễn phí · Ngoại tuyến</span></div>
+    <div class="toolbar"><div class="tabs" role="group" aria-label="Lọc loại câu hỏi">${[['mixed','Tổng hợp'],['mcq','A / B / C / D'],['tf','Đúng – Sai']].map(([key,label]) => `<button class="tab ${state.filter===key?'active':''}" data-action="filter" data-filter="${key}" aria-pressed="${state.filter===key}">${label}</button>`).join('')}</div><label class="filter" for="chapter-filter">Lọc theo chương <select id="chapter-filter"><option value="all">Tất cả chương</option>${Object.keys(CHAPTERS).map(k=>`<option value="${k}" ${state.chapter===k?'selected':''}>Chương ${k} · ${CHAPTERS[k].name}</option>`).join('')}</select></label></div>
+    <div class="exam-cards">${chapters.map(ch=>{
+      const spec=examSpec(ch,state.filter), mc=spec.list.filter(q=>q.type==='mcq').length, tf=spec.list.length-mc;
+      return `<article class="card exam-card ${ch==='all'?'comprehensive':''}"><div class="card-top"><span class="chapter-icon">${icon(ch==='all'?'grid':'flask',25)}</span><span class="pill">${ch==='all'?'TOÀN BỘ':'CHƯƠNG '+ch}</span></div><div><h3>${ch==='all'?'Tổng ôn giữa học kỳ I':CHAPTERS[ch].name}</h3><p class="description">${ch==='all'?'Kết nối kiến thức cả 3 chương trong một đề.':CHAPTERS[ch].description}</p></div><div class="meta"><span>${icon('book',16)}${spec.list.length} câu</span><span>${icon('clock',16)}45 phút</span></div><div class="card-bottom"><span>${mc&&tf?`${mc} A/B/C/D · ${tf} đúng–sai`:filterName}</span><button class="btn primary" data-action="setup" data-chapter="${ch}">Làm bài ${icon('arrow',16)}</button></div></article>`;
+    }).join('')}</div>
+    <div class="note"><strong>Cách chấm:</strong> Mỗi câu A/B/C/D đúng được 1 điểm; mỗi ý đúng–sai đúng được 0,25 điểm. Điểm thang 10 = tổng điểm đạt ÷ số câu × 10. Không trừ điểm câu sai/bỏ trống. Các câu đã biên tập có bản gốc để đối chiếu khi xem giải thích.</div></section>
+    <section class="history-section" aria-labelledby="history-title"><div class="section-heading"><div><h2 id="history-title">Lịch sử làm bài</h2><p>Chỉ lưu kết quả trên trình duyệt và thiết bị này.</p></div>${getHistory().length?'<button class="text-button" data-action="clear-history">Xóa lịch sử</button>':''}</div><div class="card history-box">${historyHTML()}</div>${storageWarning?'<p class="aside-note">Lưu trữ cục bộ hiện không khả dụng; lịch sử chỉ giữ trong phiên mở trang này.</p>':''}</section>
+  </div>`;
+  $('#chapter-filter').value = state.chapter;
+}
+/* Hộp thoại có quản lý focus để dùng bằng bàn phím và trình đọc màn hình. */
+function showModal(title, body) {
+  closeDrawer(); lastFocus=document.activeElement;
+  $('#modal-root').innerHTML=`<div class="modal-backdrop"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1"><div class="modal-head"><h2 id="modal-title">${escapeHTML(title)}</h2><button class="icon-button" data-action="close-modal" aria-label="Đóng">${icon('close',18)}</button></div><div class="modal-body">${body}</div></section></div>`;
+  document.body.style.overflow='hidden'; $('.modal').focus();
+}
+function closeModal(restore=true) {
+  $('#modal-root').innerHTML=''; document.body.style.overflow='';
+  if (restore && lastFocus && document.contains(lastFocus)) lastFocus.focus();
+}
+let pendingSpec = null, pendingMode = 'practice';
+function setupExam(chapter,filter=state.filter) {
+  pendingSpec=examSpec(chapter,filter); pendingMode='practice';
+  showModal('Sẵn sàng làm bài?',`<p class="modal-description">${escapeHTML(pendingSpec.title)}<br>${pendingSpec.list.length} câu · 45 phút · ${filter==='mixed'?'A/B/C/D trước, đúng–sai sau':filter==='mcq'?'Trắc nghiệm A/B/C/D':'Trắc nghiệm đúng–sai'}</p><div class="field"><label>Chế độ làm bài</label><div class="mode-buttons"><button class="mode-button active" data-action="mode" data-mode="practice" aria-pressed="true"><strong>Luyện tập</strong><small>Giải thích ngay sau khi trả lời. Đáp án đã kiểm tra được khóa.</small></button><button class="mode-button" data-action="mode" data-mode="exam" aria-pressed="false"><strong>Thi thử</strong><small>Tự do sửa câu trả lời. Xem đáp án sau khi nộp.</small></button></div></div><div class="field"><label for="shuffle-mode">Thứ tự câu hỏi & đáp án</label><select id="shuffle-mode"><option value="none">Giữ nguyên thứ tự</option><option value="questions">Đảo câu hỏi</option><option value="options">Đảo đáp án A/B/C/D</option><option value="both">Đảo cả câu hỏi và A/B/C/D</option></select></div><div class="modal-note">${icon('shield',16)} Luôn giữ phần A/B/C/D trước, đúng–sai sau. Các ý a–b–c–d không đảo. Hết giờ sẽ tự nộp; bài đang làm không được lưu khi tải lại hoặc đóng trang.</div><div class="modal-actions"><button class="btn" data-action="close-modal">Để sau</button><button class="btn primary" data-action="start">Bắt đầu làm bài ${icon('arrow',16)}</button></div>`);
+}
+function shuffled(array) {
+  const copy=array.slice();
+  for(let i=copy.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[copy[i],copy[j]]=[copy[j],copy[i]];}
+  return copy;
+}
+function startExam() {
+  const shuffle=$('#shuffle-mode').value, spec=pendingSpec;
+  const make=q=>({...q,order:q.type==='mcq'?(shuffle==='options'||shuffle==='both'?shuffled([0,1,2,3]):[0,1,2,3]):null});
+  let mc=spec.list.filter(q=>q.type==='mcq').map(make),tf=spec.list.filter(q=>q.type==='tf').map(make);
+  if(shuffle==='questions'||shuffle==='both'){mc=shuffled(mc);tf=shuffled(tf);}
+  closeModal(false);
+  state.session={spec:{chapter:spec.chapter,filter:spec.filter,title:spec.title},mode:pendingMode,shuffle,questions:[...mc,...tf],answers:{},flags:{},current:0,view:'single',startedAt:Date.now(),deadline:Date.now()+DURATION*1000,submitted:false};
+  state.screen='exam'; renderExam(); window.scrollTo(0,0); updateTimer(); timerId=setInterval(updateTimer,500);
+}
+function countAnswered(q,s=state.session) {
+  const a=s.answers[q.id]; return q.type==='mcq'?(Number.isInteger(a)?1:0):(Array.isArray(a)?a.filter(v=>typeof v==='boolean').length:0);
+}
+function isComplete(q,s=state.session) {return countAnswered(q,s)===(q.type==='mcq'?1:4);}
+function answerCount(s=state.session) {return s.questions.filter(q=>isComplete(q,s)).length;}
+function pointsFor(q,s=state.session) {
+  const a=s.answers[q.id];
+  if(q.type==='mcq')return a===q.answer?1:0;
+  return q.statements.reduce((sum,st,i)=>sum+(a && a[i]===st.answer ? 0.25 : 0),0);
+}
+function questionState(q,s=state.session) {
+  const count=countAnswered(q,s);
+  if(s.submitted){if(!count)return 'blank';const points=pointsFor(q,s);return points===1?'correct':points>0?'partial-score':'incorrect';}
+  if(s.flags[q.id])return 'flagged';
+  return isComplete(q,s)?'answered':count?'partial':'';
+}
+function renderExam() {
+  const s=state.session, review=s.submitted;
+  $('#footer').classList.add('hidden'); $('#header').className='exam-topbar';
+  $('#header').innerHTML=`<div class="wrap"><div class="exam-title">${escapeHTML(s.spec.title)}<div class="exam-subtitle">${review?'Xem lại bài làm':s.mode==='practice'?'Luyện tập':'Thi thử'} · ${s.questions.length} câu</div></div><div class="timer-box"><div class="timer-label">${review?'Thời gian đã làm':'Thời gian còn lại'}</div><div id="timer" class="timer">${review?formatTime(s.elapsed):formatTime(Math.ceil((s.deadline-Date.now())/1000))}</div></div><div class="top-actions">${review?'<button class="btn home-review" data-action="home">Trang chủ</button><button class="btn primary" data-action="result">Kết quả</button>':`<button class="btn primary" data-action="submit">Nộp bài ${icon('check',16)}</button>`}</div></div>`;
+  $('#main').innerHTML=`<div class="wrap exam-layout"><section class="question-column" aria-label="Nội dung bài làm"><div class="exam-tools"><span>${review?'Đối chiếu đáp án và lời giải':'Mỗi câu là một bước tiến bộ.'}</span><div class="tabs" role="group" aria-label="Cách hiển thị câu hỏi"><button class="tab ${s.view==='single'?'active':''}" data-action="view" data-view="single" aria-pressed="${s.view==='single'}">Từng câu</button><button class="tab ${s.view==='all'?'active':''}" data-action="view" data-view="all" aria-pressed="${s.view==='all'}">Tất cả câu</button></div></div><div id="questions-area"></div></section><aside id="question-aside" class="card question-aside" aria-label="Bảng câu hỏi"></aside></div><div id="drawer-overlay" class="drawer-overlay hidden" data-action="close-drawer"></div><button class="btn primary mobile-grid-toggle" data-action="drawer" aria-controls="question-aside" aria-expanded="false">${icon('grid',18)} Bảng câu hỏi <span id="mobile-progress"></span></button>`;
+  renderQuestions();renderGrid();
+}
+function originalDetails(q) {
+  if(!q.editNote && !q.needReview)return '';
+  return `<details class="edit-details"><summary>${q.editNote?'Đã biên tập · Xem ghi chú & bản gốc':'Cần kiểm tra · Xem lưu ý đáp án'}</summary>${q.editNote?`<p><strong>Điều chỉnh:</strong> ${escapeHTML(q.editNote)}</p><p>Nhãn A/B/C/D trong ghi chú và bản gốc là thứ tự trước khi đảo đáp án.</p>`:''}${q.reviewNote?`<p><strong>Cần kiểm tra:</strong> ${escapeHTML(q.reviewNote)}</p>`:''}${q.originalPrompt?`<div class="original-text"><strong>Câu gốc:</strong> ${escapeHTML(q.originalPrompt)}</div>`:''}${q.originalOptions?`<div class="original-text">${q.originalOptions.map((x,i)=>`${LETTERS[i]}. ${escapeHTML(x)}`).join('\n')}</div>`:''}${q.originalStatements?`<div class="original-text">${q.originalStatements.map((x,i)=>`${'abcd'[i]}. ${escapeHTML(typeof x==='string'?x:x.text)}`).join('\n')}</div>`:''}</details>`;
+}
+function questionHTML(q,i) {
+  const s=state.session,a=s.answers[q.id],answered=countAnswered(q),feedback=s.submitted||s.mode==='practice'&&answered>0;
+  let content='';
+  if(q.type==='mcq') {
+    content=`<div class="options" role="group" aria-label="Chọn một đáp án cho câu ${i+1}">${q.order.map((originalIndex,displayIndex)=>{
+      const selected=a===originalIndex,right=originalIndex===q.answer;
+      const cls=feedback?(right?'correct':selected?'incorrect':''):selected?'selected':'';
+      return `<button class="option ${cls}" data-action="answer" data-index="${i}" data-option="${originalIndex}" aria-pressed="${selected}" ${feedback?'disabled':''}><span class="letter">${LETTERS[displayIndex]}</span><span class="choice-content">${escapeHTML(q.options[originalIndex])}</span>${feedback&&right?'<span class="choice-mark">Đáp án đúng</span>':feedback&&selected?'<span class="choice-mark">Bạn chọn</span>':''}</button>`;
+    }).join('')}</div>${feedback?`<div class="answer-summary">Bạn chọn: <strong>${Number.isInteger(a)?LETTERS[q.order.indexOf(a)]:'Bỏ trống'}</strong> · Đáp án đúng: <strong>${LETTERS[q.order.indexOf(q.answer)]}</strong></div><div class="explanation"><strong>Giải thích</strong>${escapeHTML(q.explanation)}</div>`:''}`;
+  } else {
+    content=q.statements.map((st,j)=>{
+      const chosen=a&&a[j],hasChoice=typeof chosen==='boolean',show=s.submitted||s.mode==='practice'&&hasChoice;
+      const right=hasChoice&&chosen===st.answer;
+      return `<div class="statement ${show&&hasChoice?(right?'correct':'incorrect'):''}"><div class="statement-row"><div class="statement-text"><strong>${'abcd'[j]}.</strong> ${escapeHTML(st.text)}</div><div class="tf-controls" role="group" aria-label="Ý ${'abcd'[j]} câu ${i+1}">${[true,false].map(v=>`<button class="tf-choice ${show&&v===st.answer?'right':show&&hasChoice&&chosen===v?'wrong':hasChoice&&chosen===v?'selected':''}" data-action="tf-answer" data-index="${i}" data-statement="${j}" data-value="${v}" aria-pressed="${hasChoice&&chosen===v}" ${show?'disabled':''}>${v?'Đúng':'Sai'}</button>`).join('')}</div></div>${show?`<div class="statement-feedback"><strong>${hasChoice?`Bạn chọn: ${chosen?'Đúng':'Sai'}`:'Bỏ trống'} · Đáp án: ${st.answer?'Đúng':'Sai'}</strong><br>${escapeHTML(st.explanation)}</div>`:''}</div>`;
+    }).join('');
+    if(s.submitted)content+=`<div class="answer-summary">Điểm câu này: <strong>${pointsFor(q).toFixed(2)} / 1</strong> · Trả lời ${answered}/4 ý.</div>`;
+  }
+  const showNote=s.submitted||(s.mode==='practice'&&isComplete(q));
+  return `<article id="question-${i}" class="card question-card" data-qindex="${i}" aria-labelledby="question-title-${i}"><div class="question-heading"><h2 id="question-title-${i}">Câu ${i+1}:<span class="question-source">Chương ${q.chapter} · ${q.type==='mcq'?'Trắc nghiệm':'Đúng–sai'} · Câu ${q.number} trong đề gốc</span></h2>${q.needReview?'<span class="pill orange">Cần kiểm tra</span>':''}</div>${q.needReview?'<div class="review-alert">Đáp án tham khảo cần được giáo viên đối chiếu; câu này vẫn được tính điểm theo đáp án đã soạn.</div>':''}<div class="question-text">${escapeHTML(q.prompt)}</div>${FIGURES[q.id]?`<img class="question-image" src="${FIGURES[q.id].src}" alt="${escapeHTML(FIGURES[q.id].alt)}" width="${FIGURES[q.id].width}" height="${FIGURES[q.id].height}">`:''}${content}${showNote?originalDetails(q):''}<div class="question-actions"><div class="navigation"><button class="btn" data-action="navigate" data-index="${i-1}" ${i===0?'disabled':''}>← Câu trước</button><button class="btn soft" data-action="navigate" data-index="${i+1}" ${i===s.questions.length-1?'disabled':''}>Câu sau →</button></div>${!s.submitted?`<button class="flag-button ${s.flags[q.id]?'flagged':''}" data-action="flag" data-index="${i}" aria-pressed="${!!s.flags[q.id]}">${icon('flag',14)} ${s.flags[q.id]?'Đã đánh dấu':'Đánh dấu xem lại'}</button>`:''}</div></article>`;
+}
+function renderQuestions() {
+  const s=state.session;
+  const partHeading=q=>`<div class="part-label"><span>${q.type==='mcq'?'PHẦN I':'PHẦN II'}</span>${q.type==='mcq'?'Trắc nghiệm nhiều lựa chọn':'Trắc nghiệm đúng–sai'}</div>`;
+  $('#questions-area').innerHTML=s.view==='single'?partHeading(s.questions[s.current])+questionHTML(s.questions[s.current],s.current):s.questions.map((q,i)=>(i===0||q.type!==s.questions[i-1].type?partHeading(q):'')+questionHTML(q,i)).join('');
+}
+function renderGrid() {
+  const s=state.session,complete=answerCount(),total=s.questions.length;
+  $('#question-aside').innerHTML=`<div class="aside-title"><h2>Bảng câu hỏi</h2><button class="close-drawer" data-action="close-drawer" aria-label="Đóng bảng câu hỏi">${icon('close',18)}</button></div><p class="aside-progress">Đã hoàn thành <strong>${complete}/${total}</strong> câu</p><div class="progress-track"><div class="progress-fill" style="width:${complete/total*100}%"></div></div>${['mcq','tf'].map(type=>{
+    const qs=s.questions.map((q,i)=>({q,i})).filter(x=>x.q.type===type);
+    if(!qs.length)return '';
+    return `<div class="grid-label">${type==='mcq'?'A / B / C / D':'Đúng – Sai'}</div><div class="question-grid">${qs.map(({q,i})=>`<button class="q-number ${questionState(q)} ${i===s.current?'current':''}" data-action="navigate" data-index="${i}" ${i===s.current?'aria-current="true"':''} aria-label="Câu ${i+1}, ${s.submitted?(countAnswered(q)===0?'bỏ trống':pointsFor(q)===1?'đúng':pointsFor(q)>0?'đúng một phần':'sai'):s.flags[q.id]?'đánh dấu xem lại':isComplete(q)?'đã làm':countAnswered(q)?'đã làm một phần':'chưa làm'}">${i+1}</button>`).join('')}</div>`;
+  }).join('')}<div class="legend">${s.submitted?'<span><i class="green"></i>Đúng</span><span><i class="red"></i>Sai</span><span><i class="orange"></i>Đúng một phần</span><span><i class="gray"></i>Bỏ trống</span>':'<span><i></i>Chưa làm</span><span><i class="blue"></i>Đã làm</span><span><i class="orange"></i>Xem lại</span><span><i style="background:#EEF4FF;border-color:#8DB6FF"></i>Làm một phần</span>'}</div><p class="aside-note">${s.submitted?'Câu đúng–sai có thể đạt điểm từng phần. Bấm số câu để xem lời giải.':s.mode==='practice'?'Luyện tập: câu A/B/C/D và từng ý đúng–sai đã trả lời được khóa sau khi hiện giải thích.':'Bạn có thể thay đổi đáp án trước khi nộp bài. Viền đậm đánh dấu câu đang xem.'}</p>`;
+  $('#mobile-progress').textContent=`${complete}/${total}`;
+}
+function updateGridCurrent() {
+  if(!state.session)return;
+  document.querySelectorAll('.q-number').forEach(b=>{const active=Number(b.dataset.index)===state.session.current;b.classList.toggle('current',active);if(active)b.setAttribute('aria-current','true');else b.removeAttribute('aria-current');});
+}
+function navigate(index) {
+  const s=state.session;if(index<0||index>=s.questions.length)return;
+  s.current=index;closeDrawer();
+  if(s.view==='single'){renderQuestions();window.scrollTo({top:0,behavior:'auto'});}
+  else $('#question-'+index).scrollIntoView({behavior:'smooth',block:'start'});
+  updateGridCurrent();
+}
+function updateQuestion(index) {
+  const s=state.session,old=$('#question-'+index);
+  if(old)old.outerHTML=questionHTML(s.questions[index],index);
+  renderGrid();
+}
+function updateTimer() {
+  const s=state.session;if(!s||s.submitted||state.screen!=='exam')return;
+  const remaining=Math.max(0,Math.ceil((s.deadline-Date.now())/1000));
+  const el=$('#timer');if(el){el.textContent=formatTime(remaining);el.classList.toggle('urgent',remaining<300);}
+  if(remaining<=0)finishExam(true);
+}
+function canAnswer() {
+  const s=state.session;if(!s||s.submitted)return false;
+  if(Date.now()>=s.deadline){finishExam(true);return false;}return true;
+}
+function confirmSubmit() {
+  if(!canAnswer())return;
+  const s=state.session,done=answerCount(),partial=s.questions.filter(q=>countAnswered(q)>0&&!isComplete(q)).length;
+  showModal('Xác nhận nộp bài',`<p>Bạn đã làm <strong>${done}/${s.questions.length}</strong> câu, còn <strong>${s.questions.length-done}</strong> câu chưa làm xong. Bạn có chắc muốn nộp?</p>${partial?`<p class="modal-description">Có ${partial} câu đúng–sai mới làm một phần; các ý đã trả lời vẫn được chấm điểm.</p>`:''}<div class="modal-actions"><button class="btn" data-action="close-modal">Tiếp tục làm</button><button class="btn primary" data-action="finish">Nộp bài</button></div>`);
+}
+function finishExam(auto=false) {
+  const s=state.session;if(!s||s.submitted)return;
+  clearInterval(timerId);s.submitted=true;s.autoSubmitted=auto;
+  s.elapsed=Math.min(DURATION,Math.max(0,Math.floor((Date.now()-s.startedAt)/1000)));
+  s.totalPoints=s.questions.reduce((sum,q)=>sum+pointsFor(q,s),0);s.score=s.totalPoints/s.questions.length*10;
+  closeModal(false);closeDrawer();
+  saveHistory({title:s.spec.title+' · '+(s.spec.filter==='mixed'?'Tổng hợp':s.spec.filter==='mcq'?'A/B/C/D':'Đúng–sai'),mode:s.mode,score:s.score,elapsed:s.elapsed,date:Date.now()});
+  renderResult();window.scrollTo(0,0);if(auto)toast('Đã hết 45 phút. Bài làm của bạn đã tự động được nộp.');
+}
+function renderResult() {
+  state.screen='result';renderHeader();$('#footer').classList.remove('hidden');
+  const s=state.session,total=s.questions.length,correct=s.questions.filter(q=>pointsFor(q)===1).length,blank=s.questions.filter(q=>!countAnswered(q)).length,wrong=total-correct-blank;
+  const partial=s.questions.filter(q=>{const p=pointsFor(q);return p>0&&p<1;}).length;
+  const tf=s.questions.filter(q=>q.type==='tf'),tfRight=tf.reduce((n,q)=>n+pointsFor(q)*4,0),tfBlank=tf.reduce((n,q)=>n+4-countAnswered(q),0);
+  const percentage=Math.round(s.totalPoints/total*100);
+  $('#main').innerHTML=`<div class="result-wrap"><div class="breadcrumb">Ôn tập / ${escapeHTML(s.spec.title)} / Kết quả</div><section class="card result-card"><span class="pill ${s.autoSubmitted?'orange':'green'}">${icon('check',14)} ${s.autoSubmitted?'Hết giờ · Đã tự nộp':'Đã hoàn thành bài làm'}</span><h1>${s.score>=8?'Một bước tiến thật vững!':s.score>=5?'Tiếp tục luyện, bạn sẽ tiến bộ!':'Cùng xem lại để hiểu bài hơn.'}</h1><p>${escapeHTML(s.spec.title)} · ${s.mode==='practice'?'Luyện tập có xem đáp án':'Thi thử'}</p><div class="result-main"><div class="ring result-ring" style="background:conic-gradient(var(--blue) ${percentage}%,#E9EFF8 0)"><div class="ring-inner"><strong>${percentage}%</strong><small>ĐIỂM ĐẠT ĐƯỢC</small></div></div><div><div class="big-score">${s.score.toFixed(2)}<small> / 10</small></div><div class="score-caption">${s.totalPoints.toFixed(2)} / ${total} điểm gốc</div></div></div><div class="result-stats"><div class="stat"><strong class="green-text">${correct}</strong><span>Câu đúng hoàn toàn</span></div><div class="stat"><strong class="red-text">${wrong}</strong><span>Câu sai / chưa đủ đúng</span></div><div class="stat"><strong>${blank}</strong><span>Câu bỏ trống toàn bộ</span></div><div class="stat"><strong style="font-size:19px">${formatTime(s.elapsed)}</strong><span>Thời gian làm bài</span></div></div><div class="result-actions"><button class="btn primary" data-action="review">Xem lại bài làm ${icon('arrow',16)}</button><button class="btn" data-action="retry">Làm lại</button><button class="btn" data-action="home">Về trang chủ</button></div></section><section class="card result-detail"><h2>Cách tính điểm của bài này</h2><p>Mỗi câu A/B/C/D đúng = 1 điểm. Mỗi ý đúng–sai đúng = 0,25 điểm. Điểm thang 10 = ${s.totalPoints.toFixed(2)} ÷ ${total} × 10 = <strong>${s.score.toFixed(2)}</strong>. Không trừ điểm câu sai hoặc bỏ trống.</p>${tf.length?`<p>Phần đúng–sai: <strong>${tfRight}/${tf.length*4}</strong> ý đúng, ${tf.length*4-tfRight-tfBlank} ý sai, ${tfBlank} ý bỏ trống. Có ${partial} câu đạt điểm một phần, được gộp vào nhóm “sai / chưa đủ đúng” ở trên.</p>`:''}<p>${s.mode==='practice'?'Đây là kết quả luyện tập có hiển thị đáp án trong lúc làm. ':''}${s.questions.filter(q=>q.needReview).length?`Có ${s.questions.filter(q=>q.needReview).length} câu cần kiểm tra lại đáp án, vẫn tính điểm tham khảo. `:''}Các câu biên tập có ghi chú và bản gốc trong phần xem lại.</p></section></div>`;
+}
+function openDrawer() {
+  drawerFocus=document.activeElement;$('#question-aside').classList.add('drawer-open');$('#drawer-overlay').classList.remove('hidden');
+  $('.mobile-grid-toggle').setAttribute('aria-expanded','true');document.body.style.overflow='hidden';
+  $('#question-aside').setAttribute('role','dialog');$('#question-aside').setAttribute('aria-modal','true');$('.close-drawer').focus();
+}
+function closeDrawer() {
+  const aside=$('#question-aside');if(!aside)return;
+  const opened=aside.classList.contains('drawer-open');aside.classList.remove('drawer-open');aside.removeAttribute('role');aside.removeAttribute('aria-modal');
+  $('#drawer-overlay').classList.add('hidden');$('.mobile-grid-toggle').setAttribute('aria-expanded','false');
+  document.body.style.overflow='';if(opened&&drawerFocus&&document.contains(drawerFocus))drawerFocus.focus();
+}
+/* Dùng một bộ xử lý sự kiện, không tạo hàng trăm hàm onclick trong HTML. */
+document.addEventListener('click',event=>{
+  const button=event.target.closest('[data-action]');if(!button||button.disabled)return;
+  const action=button.dataset.action,s=state.session;
+  if(action==='close-modal'){closeModal();return;}
+  if(action==='home'){
+    if(s&&!s.submitted&&state.screen==='exam')return;
+    closeModal(false);closeDrawer();renderHome();window.scrollTo(0,0);
+  } else if(action==='filter'){state.filter=button.dataset.filter;renderHome();}
+  else if(action==='setup')setupExam(button.dataset.chapter);
+  else if(action==='mode'){
+    pendingMode=button.dataset.mode;document.querySelectorAll('.mode-button').forEach(b=>{b.classList.toggle('active',b.dataset.mode===pendingMode);b.setAttribute('aria-pressed',b.dataset.mode===pendingMode);});
+  } else if(action==='start')startExam();
+  else if(action==='view'){
+    s.view=button.dataset.view;closeDrawer();renderExam();window.scrollTo(0,0);
+    if(s.view==='all')$('#question-'+s.current).scrollIntoView({block:'start'});
+  } else if(action==='navigate')navigate(Number(button.dataset.index));
+  else if(action==='flag'){
+    if(!canAnswer())return;const i=Number(button.dataset.index),q=s.questions[i];s.flags[q.id]=!s.flags[q.id];updateQuestion(i);
+  } else if(action==='answer'){
+    if(!canAnswer())return;const i=Number(button.dataset.index),q=s.questions[i];if(s.mode==='practice'&&countAnswered(q))return;
+    s.answers[q.id]=Number(button.dataset.option);updateQuestion(i);
+  } else if(action==='tf-answer'){
+    if(!canAnswer())return;const i=Number(button.dataset.index),j=Number(button.dataset.statement),q=s.questions[i];
+    if(!s.answers[q.id])s.answers[q.id]=[null,null,null,null];
+    if(s.mode==='practice'&&typeof s.answers[q.id][j]==='boolean')return;
+    s.answers[q.id][j]=button.dataset.value==='true';updateQuestion(i);
+  } else if(action==='drawer')openDrawer();
+  else if(action==='close-drawer')closeDrawer();
+  else if(action==='submit')confirmSubmit();
+  else if(action==='finish')finishExam(Date.now()>=s.deadline);
+  else if(action==='review'){state.screen='review';s.current=0;renderExam();window.scrollTo(0,0);}
+  else if(action==='result'){closeDrawer();renderResult();window.scrollTo(0,0);}
+  else if(action==='retry')setupExam(s.spec.chapter,s.spec.filter);
+  else if(action==='clear-history')showModal('Xóa lịch sử làm bài?',`<p>Toàn bộ kết quả đã lưu trên trình duyệt này sẽ bị xóa.</p><div class="modal-actions"><button class="btn" data-action="close-modal">Giữ lại</button><button class="btn danger" data-action="confirm-clear">Xóa lịch sử</button></div>`);
+  else if(action==='confirm-clear'){
+    historyMemory=[];try{localStorage.removeItem(HISTORY_KEY);}catch(e){storageWarning=true;}
+    closeModal();renderHome();toast('Đã xóa lịch sử làm bài.');
+  }
+});
+document.addEventListener('change',e=>{if(e.target.id==='chapter-filter'){state.chapter=e.target.value;renderHome();}});
+document.addEventListener('keydown',e=>{
+  const modal=$('.modal'),drawer=$('.question-aside.drawer-open'),scope=modal||drawer;
+  if(e.key==='Escape'){if(modal)closeModal();else if(drawer)closeDrawer();return;}
+  if(e.key==='Tab'&&scope){
+    const items=Array.from(scope.querySelectorAll('button:not(:disabled),select,a[href],summary,[tabindex="0"]')).filter(el=>el.getClientRects().length);
+    if(!items.length){e.preventDefault();return;}
+    const first=items[0],last=items[items.length-1];
+    if(e.shiftKey&&(document.activeElement===first||document.activeElement===scope)){e.preventDefault();last.focus();}
+    else if(!e.shiftKey&&(document.activeElement===last||document.activeElement===scope)){e.preventDefault();first.focus();}
+  }
+});
+let scrollQueued=false;
+window.addEventListener('scroll',()=>{
+  if(scrollQueued||!state.session||state.session.view!=='all'||!['exam','review'].includes(state.screen))return;
+  scrollQueued=true;requestAnimationFrame(()=>{
+    scrollQueued=false;let current=0;const top=($('#header').offsetHeight||80)+40;
+    document.querySelectorAll('.question-card').forEach(el=>{if(el.getBoundingClientRect().top<=top)current=Number(el.dataset.qindex);});
+    if(current!==state.session.current){state.session.current=current;updateGridCurrent();}
+  });
+},{passive:true});
+window.addEventListener('resize',()=>{if(window.innerWidth>760&&$('.drawer-open'))closeDrawer();});
+window.addEventListener('beforeunload',e=>{if(state.session&&!state.session.submitted){e.preventDefault();e.returnValue='';}});
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)updateTimer();});
+/* Kiểm tra cấu trúc dữ liệu trước khi cho người dùng bắt đầu. */
+function validateQuestions() {
+  const ids=new Set();
+  return QUESTIONS.length===95&&QUESTIONS.every(q=>{
+    if(ids.has(q.id)||!CHAPTERS[q.chapter]||!q.prompt)return false;ids.add(q.id);
+    return q.type==='mcq'?q.options.length===4&&Number.isInteger(q.answer)&&q.answer>=0&&q.answer<4&&!!q.explanation:q.type==='tf'&&q.statements.length===4&&q.statements.every(st=>typeof st.answer==='boolean'&&st.text&&st.explanation);
+  });
+}
+if(validateQuestions())renderHome();
+else {renderHeader();$('#main').innerHTML='<div class="wrap"><div class="note">Dữ liệu câu hỏi chưa hợp lệ. Hãy kiểm tra lại const QUESTIONS trước khi làm bài.</div></div>';}
+</script>
+</body>
+</html>
